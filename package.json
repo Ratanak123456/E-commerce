@@ -14,9 +14,17 @@
   },
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.10",
     "daisyui": "^5.0.43"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ratanak123456/E-commerce.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ratanak123456/E-commerce/issues"
+  },
+  "homepage": "https://github.com/Ratanak123456/E-commerce#readme",
+  "description": ""
 }
