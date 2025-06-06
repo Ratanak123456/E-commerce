@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "daisyui";
+@import "flowbite/src/themes/default";
+
+/* Preline UI */
+@source "./node_modules/preline/dist/*.js";
+@import "./node_modules/preline/variants.css";
+
+/* FlowBite */
+@source "../node_modules/flowbite";
+
+/* Plugins */
+@plugin "flowbite/plugin";
+@plugin "@tailwindcss/forms";
