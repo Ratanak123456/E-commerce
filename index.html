@@ -96,6 +96,17 @@
         .dark .chip-bg {
             background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, rgba(30,41,59,0) 70%);
         }
+
+        /* Animation for FAQ accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
     </style>
 </head>
 <body class="bg-light text-light-text dark:bg-gray-900 dark:text-gray-200">
@@ -126,6 +137,7 @@
                         <a href="#products" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">Products</a>
                         <a href="#deals" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">Deals</a>
                         <a href="#about" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">About</a>
+                        <a href="#feedback" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">Feedback</a>
                     </div>
                     
                     <div class="flex items-center space-x-4">
@@ -218,6 +230,7 @@
                     <a href="#products" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Products</a>
                     <a href="#deals" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Deals</a>
                     <a href="#about" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">About</a>
+                    <a href="#feedback" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2">Feedback</a>
                     <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 flex items-center">
                         <i class="fas fa-heart mr-2"></i> Wishlist
                         <span class="ml-auto bg-accent text-white text-xs px-2 py-0.5 rounded-full">3</span>
@@ -617,6 +630,166 @@
                 </div>
             </div>
         </section>
+
+        <!-- Client Feedback Section -->
+        <section id="feedback" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">What Our Clients Say</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Hear from satisfied customers about their experience with TechGo products and services</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="light-card rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Sarah Johnson" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800 dark:text-white">Sarah Johnson</h3>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        "The MacBook Pro I purchased from TechGo exceeded all my expectations. The performance is incredible, and the customer support was exceptional throughout the entire process."
+                    </p>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 flex items-center">
+                        <i class="fas fa-laptop mr-2"></i> MacBook Pro 16"
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="light-card rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1534030347209-467a5b0ad3e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Michael Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800 dark:text-white">Michael Chen</h3>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        "As a game developer, I need powerful hardware. TechGo helped me build a custom gaming rig that handles everything I throw at it. Their expertise made all the difference!"
+                    </p>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 flex items-center">
+                        <i class="fas fa-desktop mr-2"></i> Custom Gaming PC
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="light-card rounded-2xl p-6 shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" 
+                                 alt="Emma Rodriguez" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-800 dark:text-white">Emma Rodriguez</h3>
+                            <div class="flex text-yellow-400 mt-1">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-400 mb-4">
+                        "The Lenovo ThinkPad I got for my business has been a game-changer. Lightweight yet powerful, with exceptional battery life. TechGo's recommendation was spot on!"
+                    </p>
+                    <div class="text-xs text-gray-500 dark:text-gray-400 flex items-center">
+                        <i class="fas fa-laptop mr-2"></i> Lenovo ThinkPad X1
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Frequently Asked Questions Section -->
+        <section class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Frequently Asked Questions</h2>
+                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Find answers to common questions about our products, services, and policies</p>
+            </div>
+            
+            <div class="max-w-3xl mx-auto">
+                <!-- FAQ Item 1 -->
+                <div class="faq-item light-card rounded-xl shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center">
+                        <span>What is your return policy?</span>
+                        <i class="fas fa-chevron-down transition-transform transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-400">
+                        <p>We offer a 30-day money-back guarantee on all our products. If you're not completely satisfied with your purchase, you can return it for a full refund. Products must be in original condition with all accessories included. Shipping costs for returns are the responsibility of the customer.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="faq-item light-card rounded-xl shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center">
+                        <span>Do you offer international shipping?</span>
+                        <i class="fas fa-chevron-down transition-transform transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-400">
+                        <p>Yes, we ship to over 50 countries worldwide. International shipping costs vary depending on the destination and product weight. Delivery times range from 5-15 business days. Please note that customers are responsible for any customs duties or import taxes that may apply.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="faq-item light-card rounded-xl shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center">
+                        <span>What warranty do your products come with?</span>
+                        <i class="fas fa-chevron-down transition-transform transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-400">
+                        <p>All our computers come with a standard 1-year manufacturer warranty. You can extend this warranty to 2 or 3 years during checkout. The warranty covers manufacturing defects and hardware failures. It does not cover accidental damage, liquid spills, or normal wear and tear.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="faq-item light-card rounded-xl shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center">
+                        <span>Can I customize the computers before purchase?</span>
+                        <i class="fas fa-chevron-down transition-transform transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-400">
+                        <p>Absolutely! We offer extensive customization options for most of our systems. You can upgrade components like RAM, storage, graphics cards, and processors. Our customization tool guides you through compatible options. Custom builds typically take 3-5 business days to assemble before shipping.</p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="faq-item light-card rounded-xl shadow-sm mb-4 overflow-hidden">
+                    <button class="faq-question w-full text-left p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center">
+                        <span>How do I track my order?</span>
+                        <i class="fas fa-chevron-down transition-transform transform"></i>
+                    </button>
+                    <div class="faq-answer px-6 pb-6 text-gray-600 dark:text-gray-400">
+                        <p>Once your order ships, you'll receive a confirmation email with a tracking number and link. You can also track your order by logging into your TechGo account and visiting the "My Orders" section. For custom builds, you'll receive updates at each stage of the assembly process.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-8">
+                <p class="text-gray-600 dark:text-gray-400 mb-4">Have more questions? We're here to help!</p>
+                <button class="bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition-colors">
+                    Contact Support
+                </button>
+            </div>
+        </section>
     </main>
 
     <!-- Footer -->
@@ -643,7 +816,7 @@
                     <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
                     <ul class="space-y-2">
                         <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">FAQs</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white">FAQs</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Returns & Exchanges</a></li>
                         <li><a href="#" class="text-gray-400 hover:text-white">Track Your Order</a></li>
@@ -720,6 +893,26 @@
                 document.documentElement.classList.add('dark');
                 localStorage.setItem('color-theme', 'dark');
             }
+        });
+
+        // FAQ accordion functionality
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.closest('.faq-item');
+                const isActive = faqItem.classList.contains('active');
+                
+                // Close all items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('i').classList.remove('rotate-180');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    button.querySelector('i').classList.add('rotate-180');
+                }
+            });
         });
     </script>
 </body>
