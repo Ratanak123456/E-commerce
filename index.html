@@ -280,22 +280,17 @@
     <footer class="bg-gray-800 text-white pt-16 pb-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div>
-                    <div class="flex items-center space-x-2 mb-4">
-                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-primary to-secondary flex items-center justify-center">
-                            <i class="fas fa-microchip text-white"></i>
+                <div class="mb-8">
+                    <div class="flex items-center space-x-6 mb-4">
+                        <img src="../Image/logo-square-01.png" alt="School Logo" class="h-24 w-auto rounded-lg">
+                        <div>
+                            <p class="text-sm text-gray-300 mb-1">Organized by</p>
+                            <span class="text-3xl font-bold">ISTAD</span>
                         </div>
-                        <span class="text-xl font-bold">TechGo</span>
                     </div>
-                    <p class="text-gray-400 mb-4">Your trusted source for premium computers and laptops at competitive prices.</p>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
-                    </div>
+                    <p class="text-gray-300 text-lg">Institute of Science and Technology Advanced Development - Premier educational institution shaping future innovators.</p>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
                     <ul class="space-y-2">
@@ -306,7 +301,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white">Track Your Order</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Product Categories</h3>
                     <ul class="space-y-2">
@@ -317,12 +312,13 @@
                         <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
                     </ul>
                 </div>
-                
+
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
                     <p class="text-gray-400 mb-4">Subscribe for exclusive deals and tech insights.</p>
                     <div class="flex">
-                        <input type="email" placeholder="Your email" class="px-4 py-3 w-full rounded-l-lg focus:outline-none text-gray-800">
+                        <input type="email" placeholder="Your email"
+                            class="px-4 py-3 w-full rounded-l-lg focus:outline-none text-gray-800">
                         <button class="bg-primary hover:bg-blue-600 px-4 rounded-r-lg">
                             <i class="fas fa-paper-plane text-white"></i>
                         </button>
@@ -330,7 +326,7 @@
                     <p class="text-gray-500 text-sm mt-2">By subscribing, you agree to our Privacy Policy</p>
                 </div>
             </div>
-            
+
             <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 TechGo. All rights reserved.</p>
                 <div class="flex space-x-6">
@@ -399,32 +395,6 @@
             });
         });
         
-        // Highlight active navigation tab based on scroll position
-        document.addEventListener('DOMContentLoaded', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            window.addEventListener('scroll', function() {
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (pageYOffset >= (sectionTop - 100)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                navLinks.forEach(link => {
-                    link.classList.remove('active-tab');
-                    const href = link.getAttribute('href');
-                    if (href === `#${current}` || (href === '#' && current === '')) {
-                        link.classList.add('active-tab');
-                    }
-                });
-            });
-        });
     </script>
 </body>
 </html>
