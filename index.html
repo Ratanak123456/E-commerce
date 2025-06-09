@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,11 +26,11 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-        
+
         * {
             transition: background-color 0.3s, border-color 0.3s, color 0.3s;
         }
-        
+
         body {
             font-family: 'Inter', sans-serif;
             background-color: #f8fafc;
@@ -43,58 +44,58 @@
         .dark .gradient-card {
             background: linear-gradient(145deg, #1e293b, #0f172a);
         }
-        
+
         .light-card {
             background-color: #ffffff;
             border: 1px solid #e2e8f0;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
         }
-        
+
         .dark .light-card {
             background-color: #1e293b;
             border-color: #334155;
         }
-        
+
         .light-section {
             background-color: #f1f5f9;
         }
-        
+
         .dark .light-section {
             background-color: #0f172a;
         }
-        
+
         .light-text {
             color: #334155;
         }
-        
+
         .dark .light-text {
             color: #e2e8f0;
         }
-        
+
         .light-subtle {
             color: #64748b;
         }
-        
+
         .dark .light-subtle {
             color: #94a3b8;
         }
-        
+
         .light-nav {
             background-color: #ffffff;
             border-bottom: 1px solid #e2e8f0;
         }
-        
+
         .dark .light-nav {
             background-color: #1e293b;
             border-bottom-color: #334155;
         }
-        
+
         .chip-bg {
-            background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, rgba(255,255,255,0) 70%);
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
         }
-        
+
         .dark .chip-bg {
-            background: radial-gradient(circle, rgba(37,99,235,0.25) 0%, rgba(30,41,59,0) 70%);
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(30, 41, 59, 0) 70%);
         }
 
         /* Animation for FAQ accordion */
@@ -107,12 +108,12 @@
         .faq-item.active .faq-answer {
             max-height: 500px;
         }
-        
+
         .active-tab {
             color: #2563eb;
             position: relative;
         }
-        
+
         .active-tab::after {
             content: '';
             position: absolute;
@@ -123,18 +124,107 @@
             background-color: #2563eb;
             border-radius: 3px;
         }
+
+        .container {
+      display: flex;
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #fff;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+    }
+    .sidebar h2 {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+    .sidebar ul li {
+      padding: 10px 0;
+      color: #333;
+      cursor: pointer;
+    }
+    .sidebar ul li.active {
+      color: #0071c2;
+      font-weight: bold;
+    }
+    .main {
+      flex: 1;
+      padding: 30px;
+      background-color: #fff;
+    }
+    .main h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .button {
+      background-color: #000;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-bottom: 30px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      padding: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      background-color: #fff;
+    }
+    .card.default::before {
+      content: "Default";
+      position: absolute;
+      top: -10px;
+      right: 10px;
+      font-size: 12px;
+      color: gray;
+    }
+    .card.expired {
+      background-color: #fff3cd;
+      border-left: 5px solid #ffc107;
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .card-header span {
+      font-weight: bold;
+    }
+    .expired-text {
+      color: red;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      margin-top: 40px;
+      color: #777;
+    }
+
     </style>
 </head>
+
 <body class="bg-light text-light-text dark:bg-gray-900 dark:text-gray-200">
+
     <!-- Top Announcement Bar -->
     <aside class="bg-gradient-to-r from-primary to-secondary text-white text-center py-2 px-4 text-sm">
-        <p>🚀 Free shipping on all orders over $999! <a href="#products" class="font-semibold underline ml-2">Shop Now</a></p>
+        <p>🚀 Free shipping on all orders over $999! <a href="#products" class="font-semibold underline ml-2">Shop
+                Now</a></p>
     </aside>
+    <!-- End Top Announcement Bar -->
+
 
     <!-- Header -->
     <header class="sticky top-0 z-50 light-nav dark:dark-nav shadow-sm">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
+
                 <!-- Logo -->
                 <div class="flex items-center">
                     <a href="#" class="flex items-center space-x-2">
@@ -145,6 +235,8 @@
                         <span class="text-xl font-bold text-gray-800 dark:text-white">TechGo</span>
                     </a>
                 </div>
+                <!-- End Logo -->
+
 
                 <!-- Center Navigation Tabs -->
                 <div class="hidden md:flex items-center justify-center flex-1">
@@ -157,6 +249,8 @@
                             class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">Shop</a>
                     </div>
                 </div>
+                <!-- End Center Navigation Tabs -->
+
 
                 <!-- Right Search and Actions -->
                 <div class="hidden md:flex items-center space-x-6">
@@ -228,6 +322,8 @@
                         </div>
                     </div>
                 </div>
+                <!-- End Right Search and Actions -->
+
 
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center space-x-4">
@@ -241,6 +337,8 @@
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
+                <!-- End Mobile menu button -->
+
             </div>
         </nav>
 
@@ -272,8 +370,65 @@
                 </div>
             </div>
         </div>
-    </header>
+        <!-- End Mobile menu -->
 
+
+    </header>
+    <!-- End Header -->
+
+
+    <!-- Profile -->
+    <div class="container hover:bg-gray-100 border-2 b">
+        <div class="sidebar">
+            <h2>Hi, Heang Bunleang</h2>
+            <ul >
+                <li>Account overview</li>
+                <li>My orders</li>
+                <li>My details</li>
+                <li>Change password</li>
+                <li>Address book</li>
+                <li class="active">Payment methods</li>
+                <li>Contact preferences</li>
+                <li>Social accounts</li>
+                <li>Gift cards & vouchers</li>
+                <li>Need help?</li>
+                <li>Where’s my order?</li>
+                <li>How do I make a return?</li>
+                <li>I need a new returns note</li>
+                <li>Sign out</li>
+            </ul>
+        </div>
+        <div class="main">
+            <h1>PAYMENT METHODS</h1>
+            <button class="button">ADD NEW PAYMENT METHOD</button>
+
+            <div class="card default">
+                <div class="card-header">
+                    <span>VISA Debit (9332)</span>
+                    <button>DELETE</button>
+                </div>
+                <p>Exp: 08/21</p>
+                <p>Baymard Institute Asp.</p>
+                <small>This is your default payment method</small>
+            </div>
+
+            <div class="card expired">
+                <div class="card-header">
+                    <span>VISA Debit (3207)</span>
+                    <button>DELETE</button>
+                </div>
+                <p class="expired-text">Exp: 06/18</p>
+                <p>John Newman</p>
+                <p>This card has expired.</p>
+            </div>
+
+            <div class="footer">
+                © ASOS 2018 | <a href="#">ASOS Homepage</a> | <a href="#">Terms & Conditions</a> | <a href="#">Privacy
+                    Policy</a>
+            </div>
+        </div>
+    </div>
+    <!-- End Profile -->
 
 
     <!-- Footer -->
@@ -288,7 +443,8 @@
                             <span class="text-3xl font-bold">ISTAD</span>
                         </div>
                     </div>
-                    <p class="text-gray-300 text-lg">Institute of Science and Technology Advanced Development - Premier educational institution shaping future innovators.</p>
+                    <p class="text-gray-300 text-lg">Institute of Science and Technology Advanced Development - Premier
+                        educational institution shaping future innovators.</p>
                 </div>
 
                 <div>
@@ -337,10 +493,12 @@
             </div>
         </div>
     </footer>
+    <!-- End Footer -->
+
 
     <script>
         // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
             const menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
         });
@@ -348,7 +506,7 @@
         // Dark mode toggle
         const themeToggle = document.getElementById('theme-toggle');
         const themeIcon = document.getElementById('theme-icon');
-        
+
         // Check for saved theme preference
         if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
@@ -359,12 +517,12 @@
             themeIcon.classList.remove('fa-sun');
             themeIcon.classList.add('fa-moon');
         }
-        
-        themeToggle.addEventListener('click', function() {
+
+        themeToggle.addEventListener('click', function () {
             // Toggle icon
             themeIcon.classList.toggle('fa-moon');
             themeIcon.classList.toggle('fa-sun');
-            
+
             // Toggle theme
             if (document.documentElement.classList.contains('dark')) {
                 document.documentElement.classList.remove('dark');
@@ -380,13 +538,13 @@
             button.addEventListener('click', () => {
                 const faqItem = button.closest('.faq-item');
                 const isActive = faqItem.classList.contains('active');
-                
+
                 // Close all items
                 document.querySelectorAll('.faq-item').forEach(item => {
                     item.classList.remove('active');
                     item.querySelector('i').classList.remove('rotate-180');
                 });
-                
+
                 // Open clicked item if it wasn't active
                 if (!isActive) {
                     faqItem.classList.add('active');
@@ -394,7 +552,8 @@
                 }
             });
         });
-        
+
     </script>
 </body>
+
 </html>
