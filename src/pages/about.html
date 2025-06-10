@@ -7,7 +7,7 @@
     <title>About Us - TechGo | Premium Computers & Laptops</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script>
+     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
@@ -19,6 +19,18 @@
                         dark: '#0f172a',
                         light: '#f8fafc',
                         soft: '#f1f5f9'
+                    },
+                    transitionProperty: {
+                        'colors': 'background-color, border-color, color'
+                    },
+                    keyframes: {
+                        'accordion': {
+                            '0%': { maxHeight: '0' },
+                            '100%': { maxHeight: '500px' }
+                        }
+                    },
+                    animation: {
+                        'accordion': 'accordion 0.3s ease-out'
                     }
                 }
             }
@@ -26,145 +38,7 @@
     </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-        * {
-            transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-        }
-
-        .dark .gradient-card {
-            background: linear-gradient(145deg, #1e293b, #0f172a);
-        }
-
-        .light-card {
-            background-color: #ffffff;
-            border: 1px solid #e2e8f0;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-        }
-
-        .dark .light-card {
-            background-color: #1e293b;
-            border-color: #334155;
-        }
-
-        .light-section {
-            background-color: #f1f5f9;
-        }
-
-        .dark .light-section {
-            background-color: #0f172a;
-        }
-
-        .light-text {
-            color: #334155;
-        }
-
-        .dark .light-text {
-            color: #e2e8f0;
-        }
-
-        .light-subtle {
-            color: #64748b;
-        }
-
-        .dark .light-subtle {
-            color: #94a3b8;
-        }
-
-        .light-nav {
-            background-color: #ffffff;
-            border-bottom: 1px solid #e2e8f0;
-        }
-
-        .dark .light-nav {
-            background-color: #1e293b;
-            border-bottom-color: #334155;
-        }
-
-        .chip-bg {
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(255, 255, 255, 0) 70%);
-        }
-
-        .dark .chip-bg {
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.25) 0%, rgba(30, 41, 59, 0) 70%);
-        }
-
-        /* Animation for FAQ accordion */
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-
-        .faq-item.active .faq-answer {
-            max-height: 500px;
-        }
-
-        .active-tab {
-            color: #2563eb;
-            position: relative;
-        }
-
-        .active-tab::after {
-            content: '';
-            position: absolute;
-            bottom: -8px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: #2563eb;
-            border-radius: 3px;
-        }
-
-        /* Custom styles for about page */
-        .hero-pattern {
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%232563eb' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #2563eb;
-            z-index: 10;
-        }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: auto;
-        }
-
-        .timeline-line {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            height: 100%;
-            width: 4px;
-            background-color: #2563eb;
-            z-index: 1;
-        }
-
-        .team-card:hover .social-icons {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .stat-card {
-            transition: transform 0.3s ease;
-        }
-
-        .stat-card:hover {
-            transform: translateY(-5px);
-        }
+        body { font-family: 'Inter', sans-serif; }
     </style>
 </head>
 
@@ -193,10 +67,10 @@
                 <!-- Center Navigation Tabs -->
                 <div class="hidden md:flex items-center justify-center flex-1">
                     <div class="flex gap-8">
-                        <a href="#"
-                            class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium relative after:absolute after:inset-x-0 after:bottom-[-8px] after:h-0.5 after:bg-primary after:rounded after:transition-all after:duration-300 after:scale-100">Home</a>
+                        <a href="../../index.html"
+                            class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium ">Home</a>
                         <a href="./src/pages/about.html"
-                            class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">About</a>
+                            class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium relative after:absolute after:inset-x-0 after:bottom-[-8px] after:h-0.5 after:bg-primary after:rounded after:transition-all after:duration-300 after:scale-100">About</a>
                         <a href="#products"
                             class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">Shop</a>
                     </div>
@@ -665,63 +539,79 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-white pt-16 pb-8">
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-                <div class="mb-8">
-                    <div class="flex items-center space-x-6 mb-4">
-                        <img src="../Image/logo-square-01.png" alt="School Logo" class="h-24 w-auto rounded-lg">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo Column -->
+                <div class="mb-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img src="../Image/logo-square-01.png" alt="School Logo" class="h-16 w-auto rounded-lg">
                         <div>
-                            <p class="text-sm text-gray-300 mb-1">Organized by</p>
-                            <span class="text-3xl font-bold">ISTAD</span>
+                            <p class="text-xs text-gray-400 mb-1">Organized by</p>
+                            <span class="text-xl font-bold tracking-tight">ISTAD</span>
                         </div>
                     </div>
-                    <p class="text-gray-300 text-lg">Institute of Science and Technology Advanced Development - Premier
-                        educational institution shaping future innovators.</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Institute of Science and Technology Advanced Development - Premier educational institution
+                        shaping future innovators.
+                    </p>
                 </div>
 
+                <!-- Customer Service Column -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Customer Service</h3>
+                    <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Customer Service
+                    </h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Contact Us</a></li>
-                        <li><a href="#faq" class="text-gray-400 hover:text-white">FAQs</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Shipping Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Returns & Exchanges</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Track Your Order</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Contact Us</a></li>
+                        <li><a href="#faq" class="text-gray-400 hover:text-white text-sm transition">FAQs</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Shipping Policy</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Returns &
+                                Exchanges</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Track Your Order</a>
+                        </li>
                     </ul>
                 </div>
 
+                <!-- Product Categories Column -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Product Categories</h3>
+                    <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Product Categories
+                    </h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white">Business Laptops</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Gaming Systems</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Desktop Computers</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Creative Workstations</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Gaming Systems</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Creative
+                                Workstations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Accessories</a></li>
                     </ul>
                 </div>
 
+                <!-- Newsletter Column -->
                 <div>
-                    <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
-                    <p class="text-gray-400 mb-4">Subscribe for exclusive deals and tech insights.</p>
+                    <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-3">Subscribe for exclusive deals and tech insights.</p>
                     <div class="flex">
                         <input type="email" placeholder="Your email"
-                            class="px-4 py-3 w-full rounded-l-lg focus:outline-none text-gray-800">
-                        <button class="bg-primary hover:bg-blue-600 px-4 rounded-r-lg">
+                            class="px-3 py-2 w-full rounded-l-lg focus:outline-none text-gray-800 text-sm">
+                        <button class="bg-primary hover:bg-blue-600 px-4 rounded-r-lg transition">
                             <i class="fas fa-paper-plane text-white"></i>
                         </button>
                     </div>
-                    <p class="text-gray-500 text-sm mt-2">By subscribing, you agree to our Privacy Policy</p>
+                    <p class="text-gray-500 text-xs mt-2">By subscribing, you agree to our Privacy Policy</p>
                 </div>
             </div>
 
-            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 TechGo. All rights reserved.</p>
-                <div class="flex space-x-6">
-                    <a href="#" class="text-gray-500 hover:text-white text-sm">Privacy Policy</a>
-                    <a href="#" class="text-gray-500 hover:text-white text-sm">Terms of Service</a>
-                    <a href="#" class="text-gray-500 hover:text-white text-sm">Cookies</a>
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-xs mb-3 md:mb-0">© 2023 TechGo. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-white text-xs transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-xs transition">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-xs transition">Cookies</a>
                 </div>
             </div>
         </div>
