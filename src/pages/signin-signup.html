@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>sig in / Sign Up</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/src/output.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: '#2563eb',
+            secondary: '#7c3aed',
+            accent: '#db2777',
+            dark: '#0f172a',
+            light: '#f8fafc',
+            soft: '#f1f5f9',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-dark text-light flex items-center justify-center min-h-screen p-4">
+  <div class="w-full max-w-md bg-soft dark:bg-dark rounded-2xl shadow-lg p-6">
+    <h2 class="text-2xl font-bold text-primary text-center mb-1" id="formTitle">Sign In</h2>
+    <p class="text-center text-sm text-gray-400 mb-6">Welcome back! Please enter your details.</p>
+
+    <form class="space-y-4">
+      <div id="fullNameGroup" class="hidden">
+        <label class="block mb-1 text-sm">Fullname or Nickname</label>
+        <input type="text" placeholder="Your Name"
+          class="w-full p-2 rounded bg-light dark:bg-soft text-black dark:text-black outline-none focus:ring-2 focus:ring-primary" />
+      </div>
+
+      <div id="genderGroup" class="hidden">
+        <label class="block mb-1 text-sm">Gender</label>
+        <select
+          class="w-full p-2 rounded bg-light dark:bg-soft text-black dark:text-black outline-none focus:ring-2 focus:ring-primary">
+          <option value="">Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <div>
+        <label class="block mb-1 text-sm">Email</label>
+        <input type="email" placeholder="email@example.com"
+          class="w-full p-2 rounded bg-light dark:bg-soft text-black dark:text-black outline-none focus:ring-2 focus:ring-primary"
+          required />
+      </div>
+
+      <div>
+        <label class="block mb-1 text-sm">Password</label>
+        <input type="password" placeholder="********"
+          class="w-full p-2 rounded bg-light dark:bg-soft text-black dark:text-black outline-none focus:ring-2 focus:ring-primary"
+          required />
+      </div>
+
+      <button type="submit"
+        class="w-full p-2 bg-primary text-white rounded hover:bg-blue-700 transition-colors">Submit</button>
+    </form>
+
+    <div class="text-center text-sm mt-4">
+      <span id="toggleText">Don't have an account?</span>
+      <button onclick="toggleForm()" class="text-accent underline ml-1">Sign Up</button>
+    </div>
+  </div>
+
+  <script>
+    let isSignup = false;
+    const toggleForm = () => {
+      isSignup = !isSignup;
+      document.getElementById('formTitle').textContent = isSignup ? 'Sign Up' : 'Sign In';
+      document.getElementById('toggleText').textContent = isSignup
+        ? 'Already have an account?'
+        : "Don't have an account?";
+      document.querySelector('button.text-accent').textContent = isSignup ? 'Sign In' : 'Sign Up';
+      document.getElementById('fullNameGroup').classList.toggle('hidden', !isSignup);
+      document.getElementById('genderGroup').classList.toggle('hidden', !isSignup);
+    };
+  </script>
+</body>
+</html>
