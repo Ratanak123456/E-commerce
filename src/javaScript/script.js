@@ -1,71 +1,60 @@
 //FQA
-document.addEventListener("DOMContentLoaded", function () {
-  const faqItems = document.querySelectorAll(".faq-item");
-  let activeItem = null;
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    let activeItem = null;
 
-  // Initialize first FAQ as open
-  const firstItem = faqItems[0];
-  const firstQuestion = firstItem.querySelector(".faq-question");
-  const firstAnswer = firstItem.querySelector(".faq-answer");
-  const firstIcon = firstItem.querySelector("i");
+    // Add click event to all FAQ questions
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        const answer = item.querySelector('.faq-answer');
+        const icon = item.querySelector('i');
 
-  firstAnswer.style.maxHeight = firstAnswer.scrollHeight + "px";
-  firstAnswer.classList.add("pb-6");
-  firstIcon.classList.add("rotate-180");
-  activeItem = firstItem;
+        question.addEventListener('click', () => {
+            // Toggle current item
+            if (item === activeItem) {
+                // Close active item
+                answer.style.maxHeight = '0';
+                answer.classList.remove('pb-6');
+                icon.classList.remove('rotate-180');
+                activeItem = null;
+            } else {
+                // Close previously active item if exists
+                if (activeItem) {
+                    const activeAnswer = activeItem.querySelector('.faq-answer');
+                    const activeIcon = activeItem.querySelector('i');
+                    activeAnswer.style.maxHeight = '0';
+                    activeAnswer.classList.remove('pb-6');
+                    activeIcon.classList.remove('rotate-180');
+                }
+                
+                // Open clicked item
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.classList.add('pb-6');
+                icon.classList.add('rotate-180');
+                activeItem = item;
+                
+                // Optional: Smooth scroll to keep item in view
+                item.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
 
-  // Add click event to all FAQ questions
-  faqItems.forEach((item) => {
-    const question = item.querySelector(".faq-question");
-    const answer = item.querySelector(".faq-answer");
-    const icon = item.querySelector("i");
-
-    question.addEventListener("click", () => {
-      // If clicking the active item, close it
-      if (item === activeItem) {
-        answer.style.maxHeight = "0";
-        answer.classList.remove("pb-6");
-        icon.classList.remove("rotate-180");
-        activeItem = null;
-        return;
-      }
-
-      // Close currently active item if exists
-      if (activeItem) {
-        const activeAnswer = activeItem.querySelector(".faq-answer");
-        const activeIcon = activeItem.querySelector("i");
-        activeAnswer.style.maxHeight = "0";
-        activeAnswer.classList.remove("pb-6");
-        activeIcon.classList.remove("rotate-180");
-      }
-
-      // Open clicked item
-      answer.style.maxHeight = answer.scrollHeight + "px";
-      answer.classList.add("pb-6");
-      icon.classList.add("rotate-180");
-      activeItem = item;
-
-      // Smooth scroll to keep item in view if needed
-      item.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        // Update height if content changes while open
+        answer.addEventListener('transitionend', () => {
+            if (answer.style.maxHeight !== '0px' && answer.style.maxHeight !== '') {
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+            }
+        });
     });
 
-    // Update max-height when window resizes (for responsive design)
-    answer.addEventListener("transitionend", () => {
-      if (answer.style.maxHeight !== "0px") {
-        answer.style.maxHeight = answer.scrollHeight + "px";
-      }
+    // Handle window resize
+    window.addEventListener('resize', () => {
+        if (activeItem) {
+            const activeAnswer = activeItem.querySelector('.faq-answer');
+            if (activeAnswer.style.maxHeight !== '0px') {
+                activeAnswer.style.maxHeight = activeAnswer.scrollHeight + 'px';
+            }
+        }
     });
-  });
-
-  // Handle window resize
-  window.addEventListener("resize", () => {
-    if (activeItem) {
-      const activeAnswer = activeItem.querySelector(".faq-answer");
-      if (activeAnswer.style.maxHeight !== "0px") {
-        activeAnswer.style.maxHeight = activeAnswer.scrollHeight + "px";
-      }
-    }
-  });
 });
 // Mobile menu toggle
 document
