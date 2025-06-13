@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MacBook Pro 16" - TechGo | Premium Computers & Laptops</title>
-    <link rel="stylesheet" href="../output.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -52,128 +51,6 @@
 </head>
 
 <body class="bg-light text-light-text dark:bg-gray-900 dark:text-gray-200">
-    <!-- Top Announcement Bar -->
-    <aside class="bg-gradient-to-r from-primary to-secondary text-white text-center py-2 px-4 text-sm">
-        <p>🚀 Free shipping on all orders over $999! <a href="#products" class="font-semibold underline ml-2">Shop Now</a></p>
-    </aside>
-
-    <!-- Navigation -->
-    <header class="sticky top-0 z-50 bg-white dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700 shadow-sm">
-        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <!-- Logo -->
-                <div class="flex items-center">
-                    <a href="#" class="flex items-center gap-2">
-                        <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-primary to-secondary flex items-center justify-center">
-                            <i class="fas fa-microchip text-white text-lg"></i>
-                        </div>
-                        <span class="text-xl font-bold text-gray-800 dark:text-white">TechGo</span>
-                    </a>
-                </div>
-
-                <!-- Center Navigation Tabs -->
-                <div class="hidden md:flex items-center justify-center flex-1">
-                    <div class="flex gap-8">
-                        <a href="../../index.html" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">Home</a>
-                        <a href="./about.html" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium">About</a>
-                        <a href="#products" class="text-gray-700 hover:text-primary dark:text-gray-300 dark:hover:text-primary font-medium relative after:absolute after:inset-x-0 after:bottom-[-8px] after:h-0.5 after:bg-primary after:rounded after:transition-all after:duration-300 after:scale-100">Shop</a>
-                    </div>
-                </div>
-
-                <!-- Right Search and Actions -->
-                <div class="hidden md:flex items-center gap-6">
-                    <div class="relative">
-                        <input type="text" placeholder="Search laptops..." class="ps-10 pe-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent w-64 transition-all duration-300">
-                        <i class="fas fa-search absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500"></i>
-                    </div>
-
-                    <div class="flex items-center gap-4">
-                        <button class="relative p-2 rounded-full text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                            <i class="fas fa-heart text-lg"></i>
-                            <span class="absolute top-0 end-0 bg-accent text-white text-xs rounded-full size-5 flex items-center justify-center">3</span>
-                        </button>
-
-                        <button class="relative p-2 rounded-full text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                            <i class="fas fa-shopping-cart text-lg"></i>
-                            <span class="absolute top-0 end-0 bg-primary text-white text-xs rounded-full size-5 flex items-center justify-center">2</span>
-                        </button>
-
-                        <button id="theme-toggle" class="p-2 rounded-full text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
-                            <i id="theme-icon" class="fas fa-moon text-lg"></i>
-                        </button>
-
-                        <div class="relative group">
-                            <button class="flex items-center gap-2 focus:outline-none">
-                                <div class="size-9 rounded-full overflow-hidden border-2 border-white shadow">
-                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="User profile" class="w-full h-full object-cover">
-                                </div>
-                            </button>
-
-                            <!-- Dropdown Menu -->
-                            <div class="absolute end-0 mt-2 w-56 origin-top-end bg-white dark:bg-gray-800 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 invisible opacity-0 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100 transition-all duration-200 group-hover:translate-y-0 group-focus-within:translate-y-0 translate-y-1">
-                                <div class="py-2 px-4 border-b border-gray-100 dark:border-gray-700">
-                                    <p class="text-sm font-medium text-gray-900 dark:text-white">Alex Morgan</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-400">Premium Member</p>
-                                </div>
-                                <div class="py-1">
-                                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                        <i class="fas fa-user me-3 text-gray-500 dark:text-gray-400"></i>
-                                        My Account
-                                    </a>
-                                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                        <i class="fas fa-shopping-bag me-3 text-gray-500 dark:text-gray-400"></i>
-                                        My Orders
-                                    </a>
-                                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">
-                                        <i class="fas fa-cog me-3 text-gray-500 dark:text-gray-400"></i>
-                                        Settings
-                                    </a>
-                                    <a href="#" class="flex items-center px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 border-t border-gray-100 dark:border-gray-700 mt-1 pt-2">
-                                        <i class="fas fa-sign-out-alt me-3 text-gray-500 dark:text-gray-400"></i>
-                                        Logout
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center gap-4">
-                    <button class="p-2 rounded-full text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700 relative">
-                        <i class="fas fa-shopping-cart text-lg"></i>
-                        <span class="absolute top-0 end-0 bg-primary text-white text-xs rounded-full size-5 flex items-center justify-center">2</span>
-                    </button>
-                    <button id="mobile-menu-button" class="p-2 rounded-md text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="md:hidden hidden px-4 pb-4 border-t border-gray-200 dark:border-gray-700">
-            <div class="pt-4">
-                <div class="relative mb-4">
-                    <input type="text" placeholder="Search laptops..." class="w-full ps-10 pe-4 py-2 rounded-lg border border-gray-300 dark:border-gray-700 dark:bg-gray-800 focus:ring-2 focus:ring-primary focus:border-transparent">
-                    <i class="fas fa-search absolute start-3 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500"></i>
-                </div>
-                <div class="flex flex-col gap-3">
-                    <a href="../../index.html" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 relative">Home</a>
-                    <a href="./about.html" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 relative">About</a>
-                    <a href="#products" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 relative after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-primary after:rounded">Shop</a>
-                    <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 flex items-center">
-                        <i class="fas fa-heart me-2"></i> Wishlist
-                        <span class="ms-auto bg-accent text-white text-xs px-2 py-0.5 rounded-full">3</span>
-                    </a>
-                    <a href="#" class="text-gray-700 dark:text-gray-300 hover:text-primary font-medium py-2 flex items-center">
-                        <i class="fas fa-user me-2"></i> My Account
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Breadcrumbs -->
     <div class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -208,20 +85,20 @@
             <!-- Product Gallery -->
             <div class="lg:sticky lg:top-24 self-start">
                 <div class="mb-4 rounded-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700">
-                    <img id="main-product-image" src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80" alt="MacBook Pro 16-inch" class="w-full h-auto object-cover">
+                    <img id="main-product-image" src="../Image/mac-book-m2.png" alt="MacBook Pro 16-inch" class="w-full h-auto object-cover">
                 </div>
                 <div class="grid grid-cols-4 gap-3">
-                    <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all" data-image="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
-                        <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="MacBook Pro 16-inch" class="w-full h-auto object-cover">
+                    <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all" data-image="../Image/mac-book-m2.png">
+                        <img src="../Image/mac-book-m2.png" alt="MacBook Pro 16-inch" class="w-full h-auto object-cover">
                     </button>
-                    <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all" data-image="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
-                        <img src="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="MacBook Pro 16-inch side view" class="w-full h-auto object-cover">
+                    <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all" data-image="https://itronics.in/wp-content/uploads/2023/02/mbp14-spacegray-gallery4-202301.png">
+                        <img src="https://itronics.in/wp-content/uploads/2023/02/mbp14-spacegray-gallery4-202301.png" alt="MacBook Pro 16-inch Port" class="w-full h-auto object-cover">
                     </button>
-                    <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all" data-image="https://images.unsplash.com/photo-1618410320929-65c181f8071d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
-                        <img src="https://images.unsplash.com/photo-1618410320929-65c181f8071d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="MacBook Pro 16-inch keyboard" class="w-full h-auto object-cover">
+                    <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all" data-image="https://itronics.in/wp-content/uploads/2022/08/MBP-M2_HERO_-F-01.png">
+                        <img src="https://itronics.in/wp-content/uploads/2022/08/MBP-M2_HERO_-F-01.png" alt="MacBook Pro 16-inch keyboard" class="w-full h-auto object-cover">
                     </button>
-                    <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all active" data-image="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80">
-                        <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=200&q=80" alt="MacBook Pro 16-inch screen" class="w-full h-auto object-cover">
+                    <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all active" data-image="https://www.apple.com/newsroom/images/product/mac/standard/Apple-Macbook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg">
+                        <img src="https://www.apple.com/newsroom/images/product/mac/standard/Apple-Macbook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg" alt="MacBook Pro 16-inch screen" class="w-full h-auto object-cover">
                     </button>
                 </div>
             </div>
@@ -612,7 +489,7 @@
                 <!-- Product 1 -->
                 <div class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-200 dark:border-gray-700">
                     <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="MacBook Pro 14-inch" class="w-full h-48 object-cover">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpQIMgDnY4olsh6VyMkL4xmi5NCHJ7h8oxmw&s" alt="MacBook Pro 14-inch" class="w-full h-48 object-cover">
                         <button class="absolute top-3 right-3 size-8 rounded-full bg-white/90 hover:bg-white text-gray-800 flex items-center justify-center shadow-sm">
                             <i class="fas fa-heart"></i>
                         </button>
@@ -797,174 +674,14 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Theme toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const themeIcon = document.getElementById('theme-icon');
-        
-        themeToggle.addEventListener('click', () => {
-            document.documentElement.classList.toggle('dark');
-            const isDark = document.documentElement.classList.contains('dark');
-            themeIcon.className = isDark ? 'fas fa-sun text-lg' : 'fas fa-moon text-lg';
-            localStorage.setItem('theme', isDark ? 'dark' : 'light');
-        });
-
-        // Check for saved theme preference
-        if (localStorage.getItem('theme') === 'dark' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-            themeIcon.className = 'fas fa-sun text-lg';
-        } else {
-            document.documentElement.classList.remove('dark');
-            themeIcon.className = 'fas fa-moon text-lg';
-        }
-
-        // Product gallery thumbnail navigation
-        const thumbnails = document.querySelectorAll('.product-gallery-thumbnail');
-        const mainImage = document.getElementById('main-product-image');
-        
-        thumbnails.forEach(thumbnail => {
-            thumbnail.addEventListener('click', () => {
-                // Update main image
-                const newImageSrc = thumbnail.getAttribute('data-image');
-                mainImage.src = newImageSrc;
-                
-                // Update active state
-                thumbnails.forEach(t => t.classList.remove('active', 'border-primary'));
-                thumbnail.classList.add('active', 'border-primary');
-            });
-        });
-
-        // Product option selection
-        const optionButtons = document.querySelectorAll('.product-option-btn');
-        
-        optionButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const optionType = button.getAttribute('data-option');
-                const optionValue = button.getAttribute('data-value');
-                
-                // Remove active state from all buttons of this option type
-                document.querySelectorAll(`.product-option-btn[data-option="${optionType}"]`).forEach(btn => {
-                    btn.classList.remove('border-2', 'border-primary', 'bg-blue-50', 'dark:bg-blue-900/30');
-                    btn.classList.add('border', 'border-gray-300', 'dark:border-gray-600');
-                });
-                
-                // Add active state to clicked button
-                button.classList.remove('border', 'border-gray-300', 'dark:border-gray-600');
-                button.classList.add('border-2', 'border-primary', 'bg-blue-50', 'dark:bg-blue-900/30');
-                
-                // Here you would typically update the product price based on selections
-                // For demo purposes, we'll just log the selection
-                console.log(`Selected ${optionType}: ${optionValue}`);
-            });
-        });
-
-        // Quantity selector
-        const quantityInput = document.getElementById('quantity');
-        const decreaseBtn = document.getElementById('quantity-decrease');
-        const increaseBtn = document.getElementById('quantity-increase');
-        
-        decreaseBtn.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput.value);
-            if (currentValue > 1) {
-                quantityInput.value = currentValue - 1;
-                updateAddToCartButton();
-            }
-        });
-        
-        increaseBtn.addEventListener('click', () => {
-            let currentValue = parseInt(quantityInput.value);
-            if (currentValue < 10) {
-                quantityInput.value = currentValue + 1;
-                updateAddToCartButton();
-            }
-        });
-        
-        quantityInput.addEventListener('change', () => {
-            let value = parseInt(quantityInput.value);
-            if (isNaN(value) value = 1;
-            if (value < 1) value = 1;
-            if (value > 10) value = 10;
-            quantityInput.value = value;
-            updateAddToCartButton();
-        });
-        
-        function updateAddToCartButton() {
-            const quantity = parseInt(quantityInput.value);
-            const price = 3499;
-            const total = (quantity * price).toLocaleString('en-US', {style: 'currency', currency: 'USD'});
-            document.getElementById('add-to-cart').innerHTML = `<i class="fas fa-shopping-cart"></i> Add to Cart - ${total}`;
-        }
-
-        // Product tabs
-        const tabButtons = document.querySelectorAll('[data-tab-target]');
-        const tabContents = document.querySelectorAll('[role="tabpanel"]');
-        
-        tabButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const target = button.getAttribute('data-tab-target');
-                
-                // Update tab buttons
-                tabButtons.forEach(btn => {
-                    btn.classList.remove('border-primary', 'text-primary');
-                    btn.classList.add('border-transparent', 'hover:text-gray-600', 'dark:hover:text-gray-300', 'hover:border-gray-300');
-                });
-                button.classList.add('border-primary', 'text-primary');
-                button.classList.remove('border-transparent', 'hover:text-gray-600', 'dark:hover:text-gray-300', 'hover:border-gray-300');
-                
-                // Update tab contents
-                tabContents.forEach(content => {
-                    content.classList.add('hidden');
-                });
-                document.getElementById(target).classList.remove('hidden');
-            });
-        });
-
-        // FAQ accordion
-        const faqToggles = document.querySelectorAll('.faq-toggle');
-        
-        faqToggles.forEach(toggle => {
-            toggle.addEventListener('click', () => {
-                const content = toggle.nextElementSibling;
-                const icon = toggle.querySelector('i');
-                
-                content.classList.toggle('hidden');
-                icon.classList.toggle('rotate-180');
-            });
-        });
-
-        // Add to cart functionality
-        const addToCartBtn = document.getElementById('add-to-cart');
-        
-        addToCartBtn.addEventListener('click', () => {
-            const quantity = parseInt(quantityInput.value);
-            const selectedOptions = {
-                processor: document.querySelector('.product-option-btn[data-option="processor"].border-primary').getAttribute('data-value'),
-                memory: document.querySelector('.product-option-btn[data-option="memory"].border-primary').getAttribute('data-value'),
-                storage: document.querySelector('.product-option-btn[data-option="storage"].border-primary').getAttribute('data-value'),
-                color: document.querySelector('.product-option-btn[data-option="color"].border-primary')?.getAttribute('data-value') || 'space-gray'
-            };
-            
-            // In a real app, you would send this data to your backend
-            console.log('Added to cart:', {
-                product: 'MacBook Pro 16-inch (M2 Max, 2023)',
-                quantity: quantity,
-                options: selectedOptions,
-                price: 3499,
-                total: quantity * 3499
-            });
-            
-            // Show a success message
-            alert(`${quantity} MacBook Pro 16" added to cart!`);
-        });
-    </script>
+    <script src="../javaScript/deatail/cart.js"></script>
+    <script src="../javaScript/deatail/faq.js"></script> 
+    <script src="../javaScript/deatail/product-gallery.js"></script>
+    <script src="../javaScript/deatail/product-options.js"></script>
+    <script src="../javaScript/deatail/quantity-selector.js"></script>
+    <script src="../javaScript/deatail/tabs.js"></script>
+    <script src="../javaScript/darkmode.js"></script>
+    <script src="../javaScript/mobile-menu.js"></script>
 </body>
 
 </html>
