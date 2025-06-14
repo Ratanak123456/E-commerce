@@ -164,7 +164,6 @@
             background-color: #fff;
         }
 
-
         .main h1 {
             font-size: 24px;
             margin-bottom: 20px;
@@ -399,50 +398,26 @@
         <div class="sidebar">
             <h2>Hi, Heang Bunleang</h2>
             <ul>
-                <li>Account overview</li>
-                <li>My orders</li>
-                <li>My details</li>
-                <li>Change password</li>
-                <li>Address book</li>
-                <li class="active">Payment methods</li>
-                <li>Contact preferences</li>
-                <li>Social accounts</li>
-                <li>Gift cards & vouchers</li>
-                <li>Need help?</li>
-                <li>Where's my order?</li>
-                <li>How do I make a return?</li>
-                <li>I need a new returns note</li>
-                <li>Sign out</li>
+                <li class="active">Account overview</li>
+                <li class="hover:text-blue-700">My orders</li>
+                <li class="hover:text-blue-700">My details</li>
+                <li class="hover:text-blue-700">Change password</li>
+                <li class="hover:text-blue-700">Address book</li>
+                <li class="hover:text-blue-700">Payment methods</li>
+                <li class="hover:text-blue-700">Contact preferences</li>
+                <li class="hover:text-blue-700">Social accounts</li>
+                <li class="hover:text-blue-700">Gift cards & vouchers</li>
+                <li class="hover:text-blue-700">Need help?</li>
+                <li class="hover:text-blue-700">Where's my order?</li>
+                <li class="hover:text-blue-700">How do I make a return?</li>
+                <li class="hover:text-blue-700">I need a new returns note</li>
+                <li class="hover:text-blue-700">Sign out</li>
             </ul>
         </div>
-        <div class="main">
-            <h1>PAYMENT METHODS</h1>
-            <button class="button bg-primary rounded-lg hover:bg-blue-500 ">ADD NEW PAYMENT METHOD</button>
 
-            <div class="card default">
-                <div class="card-header">
-                    <span>VISA Debit (9332)</span>
-                    <button>DELETE</button>
-                </div>
-                <p>Exp: 08/21</p>
-                <p>Baymard Institute Asp.</p>
-                <small>This is your default payment method</small>
-            </div>
+        <div class="main ">
+            <h1>ACCOUNT OVERVIEW</h1>
 
-            <div class="card expired">
-                <div class="card-header">
-                    <span>VISA Debit (3207)</span>
-                    <button>DELETE</button>
-                </div>
-                <p class="expired-text">Exp: 06/18</p>
-                <p>John Newman</p>
-                <p>This card has expired.</p>
-            </div>
-
-            <div class="footer">
-                © ASOS 2018 | <a href="#">ASOS Homepage</a> | <a href="#">Terms & Conditions</a> | <a href="#">Privacy
-                    Policy</a>
-            </div>
         </div>
     </div>
     <!-- End Profile -->
@@ -475,7 +450,6 @@
                     </ul>
                 </div>
 
-
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Product Categories</h3>
                     <ul class="space-y-2">
@@ -486,6 +460,7 @@
                         <li><a href="#" class="text-gray-400 hover:text-white">Accessories</a></li>
                     </ul>
                 </div>
+
 
                 <div>
                     <h3 class="text-lg font-semibold mb-4">Newsletter</h3>
@@ -556,7 +531,6 @@
             button.addEventListener('click', () => {
                 const faqItem = button.closest('.faq-item');
                 const isActive = faqItem.classList.contains('active');
-
 
                 // Close all items
                 document.querySelectorAll('.faq-item').forEach(item => {
