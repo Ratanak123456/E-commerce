@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - TechGo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2563eb',
+                        secondary: '#7c3aed',
+                        accent: '#db2777',
+                        dark: '#0f172a',
+                        light: '#f8fafc',
+                        soft: '#f1f5f9'
+                    },
+                    transitionProperty: {
+                        'colors': 'background-color, border-color, color'
+                    },
+                    keyframes: {
+                        'accordion': {
+                            '0%': { maxHeight: '0' },
+                            '100%': { maxHeight: '500px' }
+                        }
+                    },
+                    animation: {
+                        'accordion': 'accordion 0.3s ease-out'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-light text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors">
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Breadcrumbs -->
+        <nav class="flex mb-6" aria-label="Breadcrumb">
+            <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+                <li class="inline-flex items-center">
+                    <a href="../../index.html" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary dark:text-gray-400 dark:hover:text-white">
+                        <i class="fas fa-home me-2"></i>
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+                        <a href="./profile/cart.html" class="ms-1 text-sm font-medium text-gray-700 hover:text-primary md:ms-2 dark:text-gray-400 dark:hover:text-white">Cart</a>
+                    </div>
+                </li>
+                <li aria-current="page">
+                    <div class="flex items-center">
+                        <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
+                        <span class="ms-1 text-sm font-medium text-primary md:ms-2 dark:text-gray-400">Checkout</span>
+                    </div>
+                </li>
+            </ol>
+        </nav>
+
+        <h1 class="text-3xl font-bold mb-8">Checkout</h1>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Left Column - Payment Form -->
+            <div class="lg:col-span-2 space-y-6">
+                <!-- Shipping Address -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center me-3">1</span>
+                        Shipping Address
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div>
+                            <label for="first-name" class="block text-sm font-medium mb-1">First Name</label>
+                            <input type="text" id="first-name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="last-name" class="block text-sm font-medium mb-1">Last Name</label>
+                            <input type="text" id="last-name" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="address" class="block text-sm font-medium mb-1">Address</label>
+                            <input type="text" id="address" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="city" class="block text-sm font-medium mb-1">City</label>
+                            <input type="text" id="city" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="zip" class="block text-sm font-medium mb-1">ZIP Code</label>
+                            <input type="text" id="zip" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label for="country" class="block text-sm font-medium mb-1">Country</label>
+                            <select id="country" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>United Kingdom</option>
+                                <option>Australia</option>
+                                <option>Germany</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center me-3">2</span>
+                        Payment Method
+                    </h2>
+                    
+                    <div class="space-y-4">
+                        <!-- Credit Card -->
+                        <div class="flex items-center">
+                            <input id="credit-card" name="payment-method" type="radio" checked class="h-4 w-4 border-gray-300 focus:ring-primary text-primary">
+                            <label for="credit-card" class="ms-3 block text-sm font-medium">Credit Card</label>
+                        </div>
+                        
+                        <div class="ml-7 border-l-2 border-gray-200 dark:border-gray-700 pl-6 pt-2 space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="card-number" class="block text-sm font-medium mb-1">Card Number</label>
+                                    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                                </div>
+                                <div>
+                                    <label for="card-name" class="block text-sm font-medium mb-1">Name on Card</label>
+                                    <input type="text" id="card-name" placeholder="John Doe" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                                </div>
+                                <div>
+                                    <label for="expiry" class="block text-sm font-medium mb-1">Expiry Date</label>
+                                    <input type="text" id="expiry" placeholder="MM/YY" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                                </div>
+                                <div>
+                                    <label for="cvv" class="block text-sm font-medium mb-1">CVV</label>
+                                    <input type="text" id="cvv" placeholder="123" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary">
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fab fa-cc-visa text-2xl text-blue-800 me-3"></i>
+                                <i class="fab fa-cc-mastercard text-2xl text-red-600 me-3"></i>
+                                <i class="fab fa-cc-amex text-2xl text-blue-500 me-3"></i>
+                                <i class="fab fa-cc-discover text-2xl text-orange-500"></i>
+                            </div>
+                        </div>
+
+                        <!-- PayPal -->
+                        <div class="flex items-center">
+                            <input id="paypal" name="payment-method" type="radio" class="h-4 w-4 border-gray-300 focus:ring-primary text-primary">
+                            <label for="paypal" class="ms-3 block text-sm font-medium">PayPal</label>
+                        </div>
+
+                        <!-- Bank Transfer -->
+                        <div class="flex items-center">
+                            <input id="bank-transfer" name="payment-method" type="radio" class="h-4 w-4 border-gray-300 focus:ring-primary text-primary">
+                            <label for="bank-transfer" class="ms-3 block text-sm font-medium">Bank Transfer</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Notes -->
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6">
+                    <h2 class="text-xl font-semibold mb-4 flex items-center">
+                        <span class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center me-3">3</span>
+                        Additional Information
+                    </h2>
+                    <div>
+                        <label for="notes" class="block text-sm font-medium mb-1">Order Notes (Optional)</label>
+                        <textarea id="notes" rows="3" class="w-full px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-lg focus:ring-primary focus:border-primary" placeholder="Special instructions, delivery preferences, etc."></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column - Order Summary -->
+            <div class="lg:col-span-1">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-6">
+                    <h2 class="text-xl font-semibold mb-4">Order Summary</h2>
+                    
+                    <!-- Products -->
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center">
+                            <div class="w-16 h-16 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Product" class="w-full h-full object-cover">
+                            </div>
+                            <div class="ms-4 flex-1">
+                                <h3 class="text-sm font-medium">MacBook Pro 14" M2 Pro</h3>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Space Gray, 16GB RAM, 512GB SSD</p>
+                            </div>
+                            <div class="text-end">
+                                <p class="text-sm font-medium">$1,999.00</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Qty: 1</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center">
+                            <div class="w-16 h-16 rounded-md overflow-hidden bg-gray-100 dark:bg-gray-700">
+                                <img src="https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&q=80" alt="Product" class="w-full h-full object-cover">
+                            </div>
+                            <div class="ms-4 flex-1">
+                                <h3 class="text-sm font-medium">Magic Mouse 2</h3>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">White</p>
+                            </div>
+                            <div class="text-end">
+                                <p class="text-sm font-medium">$79.00</p>
+                                <p class="text-xs text-gray-500 dark:text-gray-400">Qty: 1</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Summary -->
+                    <div class="space-y-3 border-t border-gray-200 dark:border-gray-700 pt-4 mb-6">
+                        <div class="flex justify-between">
+                            <span class="text-sm">Subtotal</span>
+                            <span class="text-sm font-medium">$2,078.00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm">Shipping</span>
+                            <span class="text-sm font-medium text-green-600">Free</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm">Tax</span>
+                            <span class="text-sm font-medium">$166.24</span>
+                        </div>
+                        <div class="flex justify-between text-lg font-bold pt-2">
+                            <span>Total</span>
+                            <span>$2,244.24</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Promo Code -->
+                    <div class="mb-6">
+                        <label for="promo-code" class="block text-sm font-medium mb-1">Promo Code</label>
+                        <div class="flex">
+                            <input type="text" id="promo-code" placeholder="Enter code" class="flex-1 px-4 py-2 border border-gray-300 dark:border-gray-700 dark:bg-gray-700 rounded-l-lg focus:ring-primary focus:border-primary">
+                            <button class="bg-gray-200 dark:bg-gray-700 px-4 rounded-r-lg text-sm font-medium">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Checkout Button -->
+                    <button class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
+                        Complete Order
+                    </button>
+                    
+                    <!-- Security Info -->
+                    <div class="mt-4 text-center text-xs text-gray-500 dark:text-gray-400">
+                        <div class="flex items-center justify-center mb-2">
+                            <i class="fas fa-lock me-2"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <p>Your personal data will be used to process your order and for other purposes described in our privacy policy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo Column -->
+                <div class="mb-6">
+                    <div class="flex items-center space-x-4 mb-4">
+                        <img src="../Image/logo-square-01.png" alt="School Logo" class="h-16 w-auto rounded-lg">
+                        <div>
+                            <p class="text-xs text-gray-400 mb-1">Organized by</p>
+                            <span class="text-xl font-bold tracking-tight">ISTAD</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Institute of Science and Technology Advanced Development - Premier educational institution
+                        shaping future innovators.
+                    </p>
+                </div>
+
+                <!-- Customer Service Column -->
+                <div>
+                    <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Customer Service
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="./about.html" class="text-gray-400 hover:text-white text-sm transition">Contact Us</a></li>
+                        <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">FAQs</a></li>
+                        <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Shipping Policy</a>
+                        </li>
+                        <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Returns &
+                                Exchanges</a></li>
+                        <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Track Your Order</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Product Categories Column -->
+                <div>
+                    <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Product Categories
+                    </h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Gaming Systems</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a>
+                        </li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Creative
+                                Workstations</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white text-sm transition">Accessories</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter Column -->
+                <div>
+                    <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Newsletter</h3>
+                    <p class="text-gray-400 text-sm mb-3">Subscribe for exclusive deals and tech insights.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email"
+                            class="px-3 py-2 w-full rounded-l-lg focus:outline-none text-gray-800 text-sm">
+                        <button class="bg-primary hover:bg-blue-600 px-4 rounded-r-lg transition">
+                            <i class="fas fa-paper-plane text-white"></i>
+                        </button>
+                    </div>
+                    <p class="text-gray-500 text-xs mt-2">By subscribing, you agree to our Privacy Policy</p>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-xs mb-3 md:mb-0">© 2023 TechGo. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-500 hover:text-white text-xs transition">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-xs transition">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-white text-xs transition">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../javaScript/darkmode.js"></script>
+</body>
+</html>
