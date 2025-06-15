@@ -245,16 +245,16 @@
 
                         <!-- Mobile Dropdown Navigation -->
                         <div class="lg:hidden">
-                            <button id="mobile-menu-button"
+<button id="account-mobile-menu-button"
                                 class="w-full flex justify-between items-center px-4 py-3 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">
                                 <span class="font-medium text-gray-800 dark:text-white">Menu</span>
                                 <i class="fas fa-chevron-down text-gray-500 dark:text-gray-400 transition-transform duration-200"
-                                    id="mobile-menu-icon"></i>
+                                    id="account-mobile-menu-icon"></i>
                             </button>
 
-                            <div id="mobile-menu" class="hidden bg-white dark:bg-gray-800">
+                            <div id="account-mobile-menu" class="hidden bg-white dark:bg-gray-800">
                                 <a href="./profile.html"
-                                    class="nav-link flex items-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors border-l-4 border-transparent">
+                                    class="nav-link flex items-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors border-l-4 border-primary">
                                     <i
                                         class="fas fa-user-circle text-gray-500 dark:text-gray-400 w-6 text-center mr-3"></i>
                                     <span class="flex-1">Profile Overview</span>
@@ -273,7 +273,7 @@
                                     <span class="bg-primary text-white text-xs px-2 py-1 rounded-full">3</span>
                                 </a>
                                 <a href="./cart.html"
-                                    class="nav-link flex items-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors border-l-4 border-primary">
+                                    class="nav-link flex items-center px-6 py-3 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors border-l-4 border-transparent">
                                     <i
                                         class="fas fa-shopping-cart text-gray-500 dark:text-gray-400 w-6 text-center mr-3"></i>
                                     <span class="flex-1">Cart</span>
@@ -630,13 +630,21 @@
     <script src="../../javaScript/darkmode.js"></script>
     <script src="../../javaScript/mobile-menu.js"></script>
     <script>
-        // Mobile menu toggle functionality
-        document.getElementById('mobile-menu-button').addEventListener('click', function () {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('mobile-menu-icon');
+        // Account mobile menu toggle (for the sidebar navigation)
+        document.addEventListener('DOMContentLoaded', function () {
+            const accountMobileMenuButton = document.getElementById('account-mobile-menu-button');
+            const accountMobileMenu = document.getElementById('account-mobile-menu');
+            const accountMobileMenuIcon = document.getElementById('account-mobile-menu-icon');
 
-            menu.classList.toggle('hidden');
-            icon.classList.toggle('rotate-180');
+            if (accountMobileMenuButton && accountMobileMenu && accountMobileMenuIcon) {
+                accountMobileMenuButton.addEventListener('click', function () {
+                    // Toggle menu visibility
+                    accountMobileMenu.classList.toggle('hidden');
+
+                    // Rotate icon
+                    accountMobileMenuIcon.classList.toggle('rotate-180');
+                });
+            }
         });
     </script>
 </body>
