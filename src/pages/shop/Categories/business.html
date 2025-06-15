@@ -221,54 +221,71 @@
     <!-- Main -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col md:flex-row gap-8">
-            <!-- Sidebar -->
-            <aside class="w-full md:w-64 flex-shrink-0">
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-32">
-                    <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Filter by Brand</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="../brand/apple.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                                    alt="Apple" class="h-5 w-5">
-                                <span class="text-gray-700 dark:text-gray-300">Apple</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../brand/dell.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
-                                    alt="Dell" class="h-5 w-5">
-                                <span class="text-gray-700 dark:text-gray-300">Dell</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../brand/hp.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP"
-                                    class="h-5 w-5">
-                                <span class="text-gray-700 dark:text-gray-300">HP</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../brand/lenovo.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png" alt="Lenovo"
-                                    class=" w-5">
-                                <span class="text-gray-700 dark:text-gray-300">Lenovo</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../brand/asus.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png" alt="Asus"
-                                    class=" w-5">
-                                <span class="text-gray-700 dark:text-gray-300">Asus</span>
-                            </a>
-                        </li>
-                    </ul>
+            <!-- Mobile Filter Toggle Button (shown only on mobile) -->
+            <div class="md:hidden mb-4">
+                <button id="filterToggle"
+                    class="w-full flex items-center justify-between py-3 px-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
+                    <span class="font-medium text-gray-800 dark:text-white">Filter Products</span>
+                    <svg id="filterChevron"
+                        class="w-5 h-5 text-gray-600 dark:text-gray-400 transition-transform duration-200" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
 
-                    <div class="mt-8">
+            <!-- Filter Sidebar (shown by default on desktop, hidden on mobile) -->
+            <aside id="filterSidebar" class="w-full md:w-64 flex-shrink-0 hidden md:block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-32">
+                    <!-- Brand Filters -->
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Filter by Brand</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="../brand/apple.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                        alt="Apple" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Apple</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../brand/dell.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Dell</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../barnd/hp.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg"
+                                        alt="HP" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">HP</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../brand/lenovo.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png"
+                                        alt="Lenovo" class="w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Lenovo</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../brand/asus.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png"
+                                        alt="Asus" class="w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Asus</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Price Range Filters -->
+                    <div class="mb-6">
                         <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Price Range</h3>
                         <div class="space-y-4">
                             <div>
@@ -298,8 +315,9 @@
                         </div>
                     </div>
 
+                    <!-- Apply Button -->
                     <button
-                        class="w-full mt-6 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                        class="w-full bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
                         Apply Filters
                     </button>
                 </div>
@@ -327,14 +345,14 @@
                     <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Business Laptop</h3>
                     <!-- Business Products Grid -->
                     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <!-- Lenovo ThinkPad X1 Carbon (Business Laptop) -->
+                        <!-- Lenovo ThinkPad X1 Carbon -->
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://p1-ofp.lenovo.com/product/504600/504600-1.webp"
+                                <img src="https://media.storeus.com/images/product/download.webp"
                                     alt="Lenovo ThinkPad X1 Carbon" class="w-full h-48 object-contain p-4">
                                 <span
-                                    class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Ultraportable</span>
+                                    class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Business</span>
                             </div>
                             <div class="p-4">
                                 <div class="flex justify-between items-start">
@@ -342,8 +360,8 @@
                                         <h4 class="font-semibold text-gray-800 dark:text-white">ThinkPad X1 Carbon</h4>
                                         <p class="text-sm text-gray-600 dark:text-gray-400">14" WUXGA, Core i7-1260P</p>
                                     </div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Lenovo_logo_2015.svg"
-                                        alt="Lenovo" class="h-5 w-5">
+                                    <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png"
+                                        alt="Lenovo" class=" w-10">
                                 </div>
                                 <div class="mt-3">
                                     <div class="flex items-center mb-2">
@@ -374,7 +392,7 @@
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/latitude/latitude-14-9430-non-touch/media-gallery/notebook-latitude-14-9430nt-non-touch-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&wid=904&hei=840&qlt=100,0&resMode=sharp2&size=904,840"
+                                <img src="https://i.ebayimg.com/images/g/614AAOSw1aFkiUQf/s-l1200.png"
                                     alt="Dell Latitude 9430" class="w-full h-48 object-contain p-4">
                                 <span
                                     class="absolute top-2 right-2 bg-accent text-white text-xs px-2 py-1 rounded-full">Executive</span>
@@ -417,7 +435,7 @@
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08107502.png"
+                                <img src="https://montagstore.com/cdn/shop/files/3dccb7432c905d34819c38af2247b2a4873f06d7_612a3d4b-9462-4dda-b7b2-26a2db33c3ee.png?v=1721668988&width=1090"
                                     alt="HP EliteBook 840 G9" class="w-full h-48 object-contain p-4">
                                 <span
                                     class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Security</span>
@@ -456,19 +474,17 @@
                             </div>
                         </article>
 
-                        <!-- Apple Mac Mini M2 (Business Desktop) -->
+                        <!-- Mac mini M2 -->
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-mini-midnight-select-202301?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1671022165757"
-                                    alt="Mac Mini M2" class="w-full h-48 object-contain p-4">
-                                <span
-                                    class="absolute top-2 right-2 bg-gray-600 text-white text-xs px-2 py-1 rounded-full">Compact</span>
+                                <img src="https://crdms.images.consumerreports.org/prod/products/cr/models/408685-compact-desktops-apple-mac-mini-m2-8core-256gb-8gb-10033972.png"
+                                    alt="Mac mini M2" class="w-full h-48 object-contain p-4">
                             </div>
                             <div class="p-4">
                                 <div class="flex justify-between items-start">
                                     <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-white">Mac Mini M2</h4>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">Mac mini M2</h4>
                                         <p class="text-sm text-gray-600 dark:text-gray-400">8GB, 256GB SSD</p>
                                     </div>
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
@@ -483,7 +499,7 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star-half-alt"></i>
                                         </div>
-                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(132)</span>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(87)</span>
                                     </div>
                                     <div class="flex justify-between items-center">
                                         <span class="font-bold text-gray-800 dark:text-white">$599.00</span>
@@ -503,7 +519,7 @@
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://dlcdnwebimgs.asus.com/gain/7E7E7E7E-7E7E-7E7E-7E7E-7E7E7E7E7E7E/w1000/h732"
+                                <img src="https://i.ebayimg.com/images/g/OXIAAOSw7QpjyQiu/s-l400.png"
                                     alt="ASUS ExpertBook B9" class="w-full h-48 object-contain p-4">
                                 <span
                                     class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Lightweight</span>
@@ -546,7 +562,7 @@
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://p1-ofp.lenovo.com/product/504606/504606-1.webp"
+                                <img src="https://p1-ofp.static.pub/medias/bWFzdGVyfHJvb3R8Mjk5MzEwfGltYWdlL3BuZ3xoZjAvaGViLzE0MzMyMjU3OTkyNzM0LnBuZ3w2YmVkNGE2ZTgwNjhmYzcyMGU5YzY3ODU3NmYwNWIyZGI3MzY0ZGQ3NDhmOGNhNDg0YTJjMzY2ZjJkYTVjYjNl/lenovo-thinkcentre-m90a-aio-subseries-hero.png"
                                     alt="Lenovo ThinkCentre M90a" class="w-full h-48 object-contain p-4">
                                 <span
                                     class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">All-in-One</span>
@@ -696,6 +712,29 @@
 
     <script src="../../../javaScript/darkmode.js"></script>
     <script src="../../../javaScript/mobile-menu.js"></script>
+        <script>
+        document.getElementById('filterToggle').addEventListener('click', function () {
+            const sidebar = document.getElementById('filterSidebar');
+            const chevron = document.getElementById('filterChevron');
+
+            // Toggle sidebar visibility
+            sidebar.classList.toggle('hidden');
+
+            // Rotate chevron icon
+            chevron.classList.toggle('rotate-180');
+
+            // Close when clicking outside on mobile
+            if (!sidebar.classList.contains('hidden')) {
+                document.addEventListener('click', function closeSidebar(e) {
+                    if (!sidebar.contains(e.target) && e.target.id !== 'filterToggle') {
+                        sidebar.classList.add('hidden');
+                        chevron.classList.remove('rotate-180');
+                        document.removeEventListener('click', closeSidebar);
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

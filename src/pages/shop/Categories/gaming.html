@@ -222,54 +222,71 @@
     <!-- Main -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col md:flex-row gap-8">
-            <!-- Sidebar -->
-            <aside class="w-full md:w-64 flex-shrink-0">
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-32">
-                    <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Filter by Brand</h3>
-                    <ul class="space-y-2">
-                        <li>
-                            <a href="../brand/apple.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                                    alt="Apple" class="h-5 w-5">
-                                <span class="text-gray-700 dark:text-gray-300">Apple</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../brand/dell.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
-                                    alt="Dell" class="h-5 w-5">
-                                <span class="text-gray-700 dark:text-gray-300">Dell</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../brand/hp.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP"
-                                    class="h-5 w-5">
-                                <span class="text-gray-700 dark:text-gray-300">HP</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../brand/lenovo.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png" alt="Lenovo"
-                                    class=" w-5">
-                                <span class="text-gray-700 dark:text-gray-300">Lenovo</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="../brand/asus.html"
-                                class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png" alt="Asus"
-                                    class=" w-5">
-                                <span class="text-gray-700 dark:text-gray-300">Asus</span>
-                            </a>
-                        </li>
-                    </ul>
+            <!-- Mobile Filter Toggle Button (shown only on mobile) -->
+            <div class="md:hidden mb-4">
+                <button id="filterToggle"
+                    class="w-full flex items-center justify-between py-3 px-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
+                    <span class="font-medium text-gray-800 dark:text-white">Filter Products</span>
+                    <svg id="filterChevron"
+                        class="w-5 h-5 text-gray-600 dark:text-gray-400 transition-transform duration-200" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
 
-                    <div class="mt-8">
+            <!-- Filter Sidebar (shown by default on desktop, hidden on mobile) -->
+            <aside id="filterSidebar" class="w-full md:w-64 flex-shrink-0 hidden md:block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-32">
+                    <!-- Brand Filters -->
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Filter by Brand</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="../brand/apple.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                        alt="Apple" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Apple</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../brand/dell.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Dell</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../barnd/hp.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg"
+                                        alt="HP" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">HP</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../brand/lenovo.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png"
+                                        alt="Lenovo" class="w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Lenovo</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../brand/asus.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png"
+                                        alt="Asus" class="w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Asus</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Price Range Filters -->
+                    <div class="mb-6">
                         <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Price Range</h3>
                         <div class="space-y-4">
                             <div>
@@ -299,8 +316,9 @@
                         </div>
                     </div>
 
+                    <!-- Apply Button -->
                     <button
-                        class="w-full mt-6 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                        class="w-full bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
                         Apply Filters
                     </button>
                 </div>
@@ -332,24 +350,22 @@
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://dlcdnwebimgs.asus.com/gain/9C060BF5-8910-4C1D-9B4F-5A0A5A5A5A5A/w1000/h732"
-                                    alt="ASUS ROG Zephyrus G14" class="w-full h-48 object-contain p-4">
+                                <img src="https://cdn.inet.se/product/688x386/1967257_1.png" alt="ASUS ROG Zephyrus G14"
+                                    class="w-full h-48 object-contain p-4">
                                 <span
-                                    class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Portable
-                                    Power</span>
+                                    class="absolute top-2 right-2 bg-accent text-white text-xs px-2 py-1 rounded-full">Best
+                                    Seller</span>
                             </div>
                             <div class="p-4">
                                 <div class="flex justify-between items-start">
                                     <div>
                                         <h4 class="font-semibold text-gray-800 dark:text-white">ROG Zephyrus G14</h4>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">14" QHD 165Hz, Ryzen 9
-                                            6900HS</p>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">RTX 3060, 16GB DDR5</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">14" QHD, Ryzen 9 6900HS</p>
                                     </div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Asus_logo_2015.svg"
-                                        alt="ASUS" class="h-5 w-5">
+                                    <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png"
+                                        alt="ASUS" class="w-10">
                                 </div>
-                                <div class="mt-3">
+                                <div class="mt-8">
                                     <div class="flex items-center mb-2">
                                         <div class="flex text-yellow-400 text-sm">
                                             <i class="fas fa-star"></i>
@@ -361,7 +377,7 @@
                                         <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(243)</span>
                                     </div>
                                     <div class="flex justify-between items-center">
-                                        <span class="font-bold text-gray-800 dark:text-white">$1,499.00</span>
+                                        <span class="font-bold text-gray-800 dark:text-white">$1,799.00</span>
                                         <button class="text-primary hover:text-blue-600">
                                             <i class="fas fa-heart text-lg"></i>
                                         </button>
@@ -378,7 +394,7 @@
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/alienware/notebooks/alienware-x14-r1/pdp/notebook-alienware-x14-r1-pdp-module-1.jpg?fmt=png-alpha&pscan=auto&scl=1&wid=904&hei=840&qlt=100,0&resMode=sharp2&size=904,840"
+                                <img src="https://cdn1.smartprix.com/rx-iMErzmV6o-w420-h420/dell-alienware-x14-r.webp"
                                     alt="Alienware x14 R1" class="w-full h-48 object-contain p-4">
                                 <span
                                     class="absolute top-2 right-2 bg-accent text-white text-xs px-2 py-1 rounded-full">Ultra-Thin</span>
@@ -423,24 +439,21 @@
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://p1-ofp.lenovo.com/product/504604/504604-1.webp"
+                                <img src="https://p4-ofp.static.pub/fes/cms/2022/06/16/s444ye7sqwg6rv1b8on54vm77eopra543125.png"
                                     alt="Lenovo Legion 5 Pro" class="w-full h-48 object-contain p-4">
                                 <span
-                                    class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">QHD
-                                    Display</span>
+                                    class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Gaming</span>
                             </div>
                             <div class="p-4">
                                 <div class="flex justify-between items-start">
                                     <div>
                                         <h4 class="font-semibold text-gray-800 dark:text-white">Legion 5 Pro</h4>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">16" QHD 165Hz, Ryzen 7 6800H
-                                        </p>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">RTX 3070 Ti, 32GB DDR5</p>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">16" QHD, Ryzen 7 6800H</p>
                                     </div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Lenovo_logo_2015.svg"
-                                        alt="Lenovo" class="h-5 w-5">
+                                    <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png"
+                                        alt="Lenovo" class=" w-10">
                                 </div>
-                                <div class="mt-3">
+                                <div class="mt-8">
                                     <div class="flex items-center mb-2">
                                         <div class="flex text-yellow-400 text-sm">
                                             <i class="fas fa-star"></i>
@@ -452,7 +465,7 @@
                                         <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(256)</span>
                                     </div>
                                     <div class="flex justify-between items-center">
-                                        <span class="font-bold text-gray-800 dark:text-white">$1,899.00</span>
+                                        <span class="font-bold text-gray-800 dark:text-white">$1,599.00</span>
                                         <button class="text-primary hover:text-blue-600">
                                             <i class="fas fa-heart text-lg"></i>
                                         </button>
@@ -465,22 +478,110 @@
                             </div>
                         </article>
 
-                        <!-- HP Omen 16 -->
+                        <!-- HP Omen 17 -->
                         <article
                             class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                             <div class="relative">
-                                <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c08298100.png"
-                                    alt="HP Omen 16" class="w-full h-48 object-contain p-4">
+                                <img src="https://technomediatrade.com/wp-content/uploads/2023/05/transparent-17T-CK100-front.png"
+                                    alt="HP Omen 17" class="w-full h-48 object-contain p-4">
                                 <span
-                                    class="absolute top-2 right-2 bg-gray-600 text-white text-xs px-2 py-1 rounded-full">Performance</span>
+                                    class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Gaming</span>
                             </div>
                             <div class="p-4">
                                 <div class="flex justify-between items-start">
                                     <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-white">Omen 16</h4>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">16.1" QHD 165Hz, i7-12700H
-                                        </p>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">RTX 3070 Ti, 16GB DDR5</p>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">HP Omen 17</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">17.3" QHD, RTX 3080 Ti</p>
+                                    </div>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg"
+                                        alt="HP" class="h-5 w-5">
+                                </div>
+                                <div class="mt-8">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(203)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$2,799.00</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- Dell Alienware m18 -->
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/alienware-notebooks/alienware-m18-mlk/pdp/laptop-alienware-m18-mlk-pdp-mod09.psd?fmt=png-alpha&wid=5000&hei=2918"
+                                    alt="Alienware m18" class="w-full h-48 object-contain p-4">
+                                <span
+                                    class="absolute top-2 right-2 bg-purple-500 text-white text-xs px-2 py-1 rounded-full">18"
+                                    Beast</span>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">Alienware m18</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">i9-13980HX, 64GB, RTX 4090,
+                                            2TB SSD</p>
+                                    </div>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
+                                </div>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(142)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$3,799.99</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </article>
+
+                        <!-- HP Omen Transcend 16 -->
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://static1.xdaimages.com/wordpress/wp-content/uploads/2023/03/omen-transcend-16-family-picture.png"
+                                    alt="HP Omen Transcend 16" class="w-full h-48 object-contain p-4">
+                                <span
+                                    class="absolute top-2 right-2 bg-cyan-500 text-white text-xs px-2 py-1 rounded-full">Slim
+                                    QHD+</span>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">OMEN Transcend 16</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">i9-13900HX, 32GB, RTX 4070,
+                                            2TB SSD</p>
                                     </div>
                                     <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg"
                                         alt="HP" class="h-5 w-5">
@@ -492,102 +593,12 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
+                                            <i class="far fa-star"></i>
                                         </div>
                                         <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(203)</span>
                                     </div>
                                     <div class="flex justify-between items-center">
-                                        <span class="font-bold text-gray-800 dark:text-white">$1,699.00</span>
-                                        <button class="text-primary hover:text-blue-600">
-                                            <i class="fas fa-heart text-lg"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <button
-                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </article>
-
-                        <!-- MSI Raider GE76 -->
-                        <article
-                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <div class="relative">
-                                <img src="https://asset.msi.com/resize/image/global/product/product_1652088170f703b0c9a1a6a5a1a5a1a5a1a5a1a5a1a5a1a5a1a5a1a5a1a5a1a5a.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png"
-                                    alt="MSI Raider GE76" class="w-full h-48 object-contain p-4">
-                                <span
-                                    class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Flagship</span>
-                            </div>
-                            <div class="p-4">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-white">Raider GE76</h4>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">17.3" FHD 360Hz, i9-12900HK
-                                        </p>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">RTX 3080 Ti, 32GB DDR5</p>
-                                    </div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/MSI_logo.svg"
-                                        alt="MSI" class="h-5 w-5">
-                                </div>
-                                <div class="mt-3">
-                                    <div class="flex items-center mb-2">
-                                        <div class="flex text-yellow-400 text-sm">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(176)</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="font-bold text-gray-800 dark:text-white">$3,299.00</span>
-                                        <button class="text-primary hover:text-blue-600">
-                                            <i class="fas fa-heart text-lg"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                                <button
-                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                    Add to Cart
-                                </button>
-                            </div>
-                        </article>
-
-                        <!-- Razer Blade 15 -->
-                        <article
-                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                            <div class="relative">
-                                <img src="https://assets2.razerzone.com/images/pnx.assets/618c0b65424070a1017a7168ea1b6337/razer-blade-15-2022-usp4.jpg"
-                                    alt="Razer Blade 15" class="w-full h-48 object-contain p-4">
-                                <span
-                                    class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Premium</span>
-                            </div>
-                            <div class="p-4">
-                                <div class="flex justify-between items-start">
-                                    <div>
-                                        <h4 class="font-semibold text-gray-800 dark:text-white">Razer Blade 15</h4>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">15.6" QHD 240Hz, i7-12800H
-                                        </p>
-                                        <p class="text-sm text-gray-600 dark:text-gray-400">RTX 3070 Ti, 16GB DDR5</p>
-                                    </div>
-                                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Razer_snake_logo.svg"
-                                        alt="Razer" class="h-5 w-5">
-                                </div>
-                                <div class="mt-3">
-                                    <div class="flex items-center mb-2">
-                                        <div class="flex text-yellow-400 text-sm">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(231)</span>
-                                    </div>
-                                    <div class="flex justify-between items-center">
-                                        <span class="font-bold text-gray-800 dark:text-white">$2,499.00</span>
+                                        <span class="font-bold text-gray-800 dark:text-white">$1,899.99</span>
                                         <button class="text-primary hover:text-blue-600">
                                             <i class="fas fa-heart text-lg"></i>
                                         </button>
@@ -671,11 +682,14 @@
                     <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Product Categories
                     </h3>
                     <ul class="space-y-2">
-                        <li><a href="./business.html" class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a>
+                        <li><a href="./business.html" class="text-gray-400 hover:text-white text-sm transition">Business
+                                Laptops</a>
                         </li>
-                        <li><a href="./gaming.html" class="text-gray-400 hover:text-white text-sm transition">Gaming Systems</a>
+                        <li><a href="./gaming.html" class="text-gray-400 hover:text-white text-sm transition">Gaming
+                                Systems</a>
                         </li>
-                        <li><a href="./desktop.html" class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a>
+                        <li><a href="./desktop.html" class="text-gray-400 hover:text-white text-sm transition">Desktop
+                                Computers</a>
                         </li>
                         <li><a href="./creative.html" class="text-gray-400 hover:text-white text-sm transition">Creative
                                 Workstations</a></li>
@@ -711,6 +725,29 @@
 
     <script src="../../../javaScript/darkmode.js"></script>
     <script src="../../../javaScript/mobile-menu.js"></script>
+    <script>
+        document.getElementById('filterToggle').addEventListener('click', function () {
+            const sidebar = document.getElementById('filterSidebar');
+            const chevron = document.getElementById('filterChevron');
+
+            // Toggle sidebar visibility
+            sidebar.classList.toggle('hidden');
+
+            // Rotate chevron icon
+            chevron.classList.toggle('rotate-180');
+
+            // Close when clicking outside on mobile
+            if (!sidebar.classList.contains('hidden')) {
+                document.addEventListener('click', function closeSidebar(e) {
+                    if (!sidebar.contains(e.target) && e.target.id !== 'filterToggle') {
+                        sidebar.classList.add('hidden');
+                        chevron.classList.remove('rotate-180');
+                        document.removeEventListener('click', closeSidebar);
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

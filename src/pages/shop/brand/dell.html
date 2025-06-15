@@ -166,17 +166,19 @@
         <div class="bg-gray-100 dark:bg-gray-700 border-t border-gray-200 dark:border-gray-600">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="flex overflow-x-auto py-3 space-x-6">
-                    <a href="../../shop.html" class="whitespace-nowrap px-3 py-1 rounded-full bg-primary text-white text-sm font-medium">All Products</a>
-                    <a href="#"
+                    <a href="../../shop.html"
+                        class="whitespace-nowrap px-3 py-1 rounded-full bg-primary text-white text-sm font-medium">All
+                        Products</a>
+                    <a href="../Categories/business.html"
                         class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 text-sm font-medium">Business
                         Laptops</a>
-                    <a href="#"
+                    <a href="../Categories/gaming.html"
                         class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 text-sm font-medium">Gaming
                         Laptops</a>
-                    <a href="#"
+                    <a href="../Categories/desktop.html"
                         class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 text-sm font-medium">Desktop
                         Computers</a>
-                    <a href="#"
+                    <a href="../Categories/creative.html"
                         class="whitespace-nowrap px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 text-sm font-medium">Creative
                         Workstations</a>
                 </div>
@@ -220,87 +222,107 @@
     <!-- Main -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col md:flex-row gap-8">
-<!-- Mobile Filter Toggle Button (shown only on mobile) -->
-<div class="md:hidden mb-4">
-  <button id="filterToggle" class="w-full flex items-center justify-between py-3 px-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
-    <span class="font-medium text-gray-800 dark:text-white">Filter Products</span>
-    <svg id="filterChevron" class="w-5 h-5 text-gray-600 dark:text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-    </svg>
-  </button>
-</div>
+            <!-- Mobile Filter Toggle Button (shown only on mobile) -->
+            <div class="md:hidden mb-4">
+                <button id="filterToggle"
+                    class="w-full flex items-center justify-between py-3 px-4 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700">
+                    <span class="font-medium text-gray-800 dark:text-white">Filter Products</span>
+                    <svg id="filterChevron"
+                        class="w-5 h-5 text-gray-600 dark:text-gray-400 transition-transform duration-200" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
 
-<!-- Filter Sidebar (shown by default on desktop, hidden on mobile) -->
-<aside id="filterSidebar" class="w-full md:w-64 flex-shrink-0 hidden md:block">
-  <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-32">
-    <!-- Brand Filters -->
-    <div class="mb-6">
-      <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Filter by Brand</h3>
-      <ul class="space-y-2">
-        <li>
-          <a href="./apple.html" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-5 w-5">
-            <span class="text-gray-700 dark:text-gray-300">Apple</span>
-          </a>
-        </li>
-        <li>
-          <a href="./dell.html" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg" alt="Dell" class="h-5 w-5">
-            <span class="text-gray-700 dark:text-gray-300">Dell</span>
-          </a>
-        </li>
-        <li>
-          <a href="./hp.html" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP" class="h-5 w-5">
-            <span class="text-gray-700 dark:text-gray-300">HP</span>
-          </a>
-        </li>
-        <li>
-          <a href="./lenovo.html" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png" alt="Lenovo" class="w-5">
-            <span class="text-gray-700 dark:text-gray-300">Lenovo</span>
-          </a>
-        </li>
-        <li>
-          <a href="./asus.html" class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-            <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png" alt="Asus" class="w-5">
-            <span class="text-gray-700 dark:text-gray-300">Asus</span>
-          </a>
-        </li>
-      </ul>
-    </div>
+            <!-- Filter Sidebar (shown by default on desktop, hidden on mobile) -->
+            <aside id="filterSidebar" class="w-full md:w-64 flex-shrink-0 hidden md:block">
+                <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-32">
+                    <!-- Brand Filters -->
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Filter by Brand</h3>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="./apple.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                        alt="Apple" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Apple</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./dell.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg bg-gray-100 dark:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Dell</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./hp.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg"
+                                        alt="HP" class="h-5 w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">HP</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./lenovo.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png"
+                                        alt="Lenovo" class="w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Lenovo</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="./asus.html"
+                                    class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+                                    <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png"
+                                        alt="Asus" class="w-5">
+                                    <span class="text-gray-700 dark:text-gray-300">Asus</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-    <!-- Price Range Filters -->
-    <div class="mb-6">
-      <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Price Range</h3>
-      <div class="space-y-4">
-        <div>
-          <label for="min-price" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Min Price</label>
-          <input type="range" id="min-price" min="0" max="5000" value="500" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-          <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-            <span>$0</span>
-            <span>$500</span>
-            <span>$1000+</span>
-          </div>
-        </div>
-        <div>
-          <label for="max-price" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Max Price</label>
-          <input type="range" id="max-price" min="0" max="5000" value="3000" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-          <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-            <span>$0</span>
-            <span>$3000</span>
-            <span>$5000+</span>
-          </div>
-        </div>
-      </div>
-    </div>
+                    <!-- Price Range Filters -->
+                    <div class="mb-6">
+                        <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Price Range</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <label for="min-price"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Min
+                                    Price</label>
+                                <input type="range" id="min-price" min="0" max="5000" value="500"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                                <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                    <span>$0</span>
+                                    <span>$500</span>
+                                    <span>$1000+</span>
+                                </div>
+                            </div>
+                            <div>
+                                <label for="max-price"
+                                    class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Max
+                                    Price</label>
+                                <input type="range" id="max-price" min="0" max="5000" value="3000"
+                                    class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                                <div class="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                                    <span>$0</span>
+                                    <span>$3000</span>
+                                    <span>$5000+</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Apply Button -->
-    <button class="w-full bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-      Apply Filters
-    </button>
-  </div>
-</aside>
+                    <!-- Apply Button -->
+                    <button
+                        class="w-full bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                        Apply Filters
+                    </button>
+                </div>
+            </aside>
 
 
             <!-- Product Grid -->
@@ -321,264 +343,267 @@
                 </div>
 
                 <!-- Dell Products Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Dell XPS 13 -->
-                    <article
-                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="relative">
-                            <img src="https://benson.ph/cdn/shop/files/notebook-xps-13-9340-t-sl-gallery-4.png?v=1729560461&width=1920"
-                                alt="Dell XPS 13" class="w-full h-48 object-contain p-4">
-                            <span
-                                class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">New</span>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">Dell XPS 13</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">13.4" FHD+, Core i7-1250U</p>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
-                                    alt="Dell" class="h-5 w-5">
+                <section class="mb-10">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800 dark:text-white">Dell Products</h3>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <!-- Dell XPS 13 -->
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://benson.ph/cdn/shop/files/notebook-xps-13-9340-t-sl-gallery-4.png?v=1729560461&width=1920"
+                                    alt="Dell XPS 13" class="w-full h-48 object-contain p-4">
+                                <span
+                                    class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">New</span>
                             </div>
-                            <div class="mt-3">
-                                <div class="flex items-center mb-2">
-                                    <div class="flex text-yellow-400 text-sm">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">Dell XPS 13</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">13.4" FHD+, Core i7-1250U</p>
                                     </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(142)</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
                                 </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$1,199.00</span>
-                                    <button class="text-primary hover:text-blue-600">
-                                        <i class="fas fa-heart text-lg"></i>
-                                    </button>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(142)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$1,199.00</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
                                 </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
                             </div>
-                            <button
-                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </article>
+                        </article>
 
-                    <!-- Dell XPS 15 -->
-                    <article
-                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="relative">
-                            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-15-9530/media-gallery/touch-black/notebook-xps-15-9530-t-black-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=320&wid=520&qlt=100,1&resMode=sharp2&size=520,320&chrss=full"
-                                alt="Dell XPS 15" class="w-full h-48 object-contain p-4">
-                            <span
-                                class="absolute top-2 right-2 bg-accent text-white text-xs px-2 py-1 rounded-full">Best
-                                Seller</span>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">Dell XPS 15</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">15.6" 4K, Core i9-12900HK</p>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
-                                    alt="Dell" class="h-5 w-5">
+                        <!-- Dell XPS 15 -->
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-15-9530/media-gallery/touch-black/notebook-xps-15-9530-t-black-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=320&wid=520&qlt=100,1&resMode=sharp2&size=520,320&chrss=full"
+                                    alt="Dell XPS 15" class="w-full h-48 object-contain p-4">
+                                <span
+                                    class="absolute top-2 right-2 bg-accent text-white text-xs px-2 py-1 rounded-full">Best
+                                    Seller</span>
                             </div>
-                            <div class="mt-3">
-                                <div class="flex items-center mb-2">
-                                    <div class="flex text-yellow-400 text-sm">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">Dell XPS 15</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">15.6" 4K, Core i9-12900HK</p>
                                     </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(256)</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
                                 </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$2,499.00</span>
-                                    <button class="text-primary hover:text-blue-600">
-                                        <i class="fas fa-heart text-lg"></i>
-                                    </button>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(256)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$2,499.00</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
                                 </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
                             </div>
-                            <button
-                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </article>
+                        </article>
 
-                    <!-- Dell Alienware m15 R7 -->
-                    <article
-                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="relative">
-                            <img src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/pQSqSW7OoC3c4EtXc9rZUbwcElSvp4n88ocoh22b.png"
-                                alt="Dell Alienware m15 R7" class="w-full h-48 object-contain p-4">
-                            <span
-                                class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Gaming</span>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">Alienware m15 R7</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">15.6" QHD, RTX 3070 Ti</p>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
-                                    alt="Dell" class="h-5 w-5">
+                        <!-- Dell Alienware m15 R7 -->
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/pQSqSW7OoC3c4EtXc9rZUbwcElSvp4n88ocoh22b.png"
+                                    alt="Dell Alienware m15 R7" class="w-full h-48 object-contain p-4">
+                                <span
+                                    class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Gaming</span>
                             </div>
-                            <div class="mt-3">
-                                <div class="flex items-center mb-2">
-                                    <div class="flex text-yellow-400 text-sm">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">Alienware m15 R7</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">15.6" QHD, RTX 3070 Ti</p>
                                     </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(187)</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
                                 </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$2,299.00</span>
-                                    <button class="text-primary hover:text-blue-600">
-                                        <i class="fas fa-heart text-lg"></i>
-                                    </button>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(187)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$2,299.00</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
                                 </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
                             </div>
-                            <button
-                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </article>
+                        </article>
 
-                    <!-- Dell OptiPlex 7000 Desktop -->
-                    <article
-                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="relative">
-                            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/products/desktops-and-all-in-ones/optiplex/7000-tsff/media-gallery/optiplex-7000t-gallery-4.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=402&qlt=100,1&resMode=sharp2&size=402,402&chrss=full"
-                                alt="Dell OptiPlex 7000" class="w-full h-48 object-contain p-4">
-                            <span
-                                class="absolute top-2 right-2 bg-gray-600 text-white text-xs px-2 py-1 rounded-full">Business</span>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">OptiPlex 7000</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">Micro Desktop, i7-12700</p>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
-                                    alt="Dell" class="h-5 w-5">
+                        <!-- Dell OptiPlex 7000 Desktop -->
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/products/desktops-and-all-in-ones/optiplex/7000-tsff/media-gallery/optiplex-7000t-gallery-4.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=402&qlt=100,1&resMode=sharp2&size=402,402&chrss=full"
+                                    alt="Dell OptiPlex 7000" class="w-full h-48 object-contain p-4">
+                                <span
+                                    class="absolute top-2 right-2 bg-gray-600 text-white text-xs px-2 py-1 rounded-full">Business</span>
                             </div>
-                            <div class="mt-3">
-                                <div class="flex items-center mb-2">
-                                    <div class="flex text-yellow-400 text-sm">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">OptiPlex 7000</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">Micro Desktop, i7-12700</p>
                                     </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(87)</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
                                 </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$1,299.00</span>
-                                    <button class="text-primary hover:text-blue-600">
-                                        <i class="fas fa-heart text-lg"></i>
-                                    </button>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(87)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$1,299.00</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
                                 </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
                             </div>
-                            <button
-                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </article>
+                        </article>
 
-                    <!-- Dell Precision 7760 Workstation -->
-                    <article
-                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="relative">
-                            <img src="https://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/dell-client-products/workstations/mobile-workstations/precision/17-7760/media-gallery/workstation_precision_17_7760_gallery_5.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=570&qlt=100,1&resMode=sharp2&size=570,402&chrss=full"
-                                alt="Dell Precision 7760" class="w-full h-48 object-contain p-4">
-                            <span
-                                class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Workstation</span>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">Precision 7760</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">17" 4K, Xeon W-11955M</p>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
-                                    alt="Dell" class="h-5 w-5">
+                        <!-- Dell Precision 7760 Workstation -->
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://i.dell.com/is/image/DellContent//content/dam/ss2/product-images/dell-client-products/workstations/mobile-workstations/precision/17-7760/media-gallery/workstation_precision_17_7760_gallery_5.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=570&qlt=100,1&resMode=sharp2&size=570,402&chrss=full"
+                                    alt="Dell Precision 7760" class="w-full h-48 object-contain p-4">
+                                <span
+                                    class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Workstation</span>
                             </div>
-                            <div class="mt-3">
-                                <div class="flex items-center mb-2">
-                                    <div class="flex text-yellow-400 text-sm">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">Precision 7760</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">17" 4K, Xeon W-11955M</p>
                                     </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(134)</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
                                 </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$3,199.00</span>
-                                    <button class="text-primary hover:text-blue-600">
-                                        <i class="fas fa-heart text-lg"></i>
-                                    </button>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(134)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$3,199.00</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
                                 </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
                             </div>
-                            <button
-                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </article>
+                        </article>
 
-                    <!-- Dell Inspiron 16 Plus -->
-                    <article
-                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="relative">
-                            <img src="https://images.fonearena.com/blog/wp-content/uploads/2022/07/Dell-Inspiron-14-Plus-Laptop-1-1024x658.png"
-                                alt="Dell Inspiron 16 Plus" class="w-full h-48 object-contain p-4">
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">Inspiron 16 Plus</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">16" 3K, Core i7-12700H</p>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
-                                    alt="Dell" class="h-5 w-5">
+                        <!-- Dell Inspiron 16 Plus -->
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://images.fonearena.com/blog/wp-content/uploads/2022/07/Dell-Inspiron-14-Plus-Laptop-1-1024x658.png"
+                                    alt="Dell Inspiron 16 Plus" class="w-full h-48 object-contain p-4">
                             </div>
-                            <div class="mt-3">
-                                <div class="flex items-center mb-2">
-                                    <div class="flex text-yellow-400 text-sm">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">Inspiron 16 Plus</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">16" 3K, Core i7-12700H</p>
                                     </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(98)</span>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                        alt="Dell" class="h-5 w-5">
                                 </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$1,499.00</span>
-                                    <button class="text-primary hover:text-blue-600">
-                                        <i class="fas fa-heart text-lg"></i>
-                                    </button>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(98)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$1,499.00</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
                                 </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
                             </div>
-                            <button
-                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </article>
-                </div>
+                        </article>
+                    </div>
+                </section>
 
                 <!-- Pagination -->
                 <div class="mt-10 flex justify-center">
@@ -595,7 +620,7 @@
                         </a>
                     </nav>
                 </div>
-            </div>
+        </div>
         </div>
     </main>
 
@@ -649,13 +674,17 @@
                     <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Product Categories
                     </h3>
                     <ul class="space-y-2">
-                        <li><a href="../shop/Categories/business.html" class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a>
+                        <li><a href="../shop/Categories/business.html"
+                                class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a>
                         </li>
-                        <li><a href="../shop/Categories/gaming.html" class="text-gray-400 hover:text-white text-sm transition">Gaming Systems</a>
+                        <li><a href="../shop/Categories/gaming.html"
+                                class="text-gray-400 hover:text-white text-sm transition">Gaming Systems</a>
                         </li>
-                        <li><a href="../shop/Categories/desktop.html" class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a>
+                        <li><a href="../shop/Categories/desktop.html"
+                                class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a>
                         </li>
-                        <li><a href="../shop/Categories/creative.html" class="text-gray-400 hover:text-white text-sm transition">Creative
+                        <li><a href="../shop/Categories/creative.html"
+                                class="text-gray-400 hover:text-white text-sm transition">Creative
                                 Workstations</a></li>
                     </ul>
                 </div>
@@ -687,28 +716,28 @@
         </div>
     </footer>
     <script>
-  document.getElementById('filterToggle').addEventListener('click', function() {
-    const sidebar = document.getElementById('filterSidebar');
-    const chevron = document.getElementById('filterChevron');
-    
-    // Toggle sidebar visibility
-    sidebar.classList.toggle('hidden');
-    
-    // Rotate chevron icon
-    chevron.classList.toggle('rotate-180');
-    
-    // Close when clicking outside on mobile
-    if (!sidebar.classList.contains('hidden')) {
-      document.addEventListener('click', function closeSidebar(e) {
-        if (!sidebar.contains(e.target) && e.target.id !== 'filterToggle') {
-          sidebar.classList.add('hidden');
-          chevron.classList.remove('rotate-180');
-          document.removeEventListener('click', closeSidebar);
-        }
-      });
-    }
-  });
-</script>
+        document.getElementById('filterToggle').addEventListener('click', function () {
+            const sidebar = document.getElementById('filterSidebar');
+            const chevron = document.getElementById('filterChevron');
+
+            // Toggle sidebar visibility
+            sidebar.classList.toggle('hidden');
+
+            // Rotate chevron icon
+            chevron.classList.toggle('rotate-180');
+
+            // Close when clicking outside on mobile
+            if (!sidebar.classList.contains('hidden')) {
+                document.addEventListener('click', function closeSidebar(e) {
+                    if (!sidebar.contains(e.target) && e.target.id !== 'filterToggle') {
+                        sidebar.classList.add('hidden');
+                        chevron.classList.remove('rotate-180');
+                        document.removeEventListener('click', closeSidebar);
+                    }
+                });
+            }
+        });
+    </script>
 
 
     <script src="../../../javaScript/darkmode.js"></script>
