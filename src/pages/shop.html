@@ -102,6 +102,7 @@
                                 <i class="fas fa-shopping-cart text-lg"></i>
                                 <span
                                     class="absolute top-0 end-0 bg-primary text-white text-xs rounded-full size-5 flex items-center justify-center">2</span>
+                            </a>
                         </button>
 
                         <button id="theme-toggle"
@@ -222,8 +223,21 @@
     <!-- Main -->
     <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div class="flex flex-col md:flex-row gap-8">
-            <!-- Sidebar -->
-            <aside class="w-full md:w-64 flex-shrink-0">
+            <!-- Mobile Filter Button (visible only on small screens) -->
+            <div class="md:hidden mb-4">
+                <button id="filterToggle"
+                    class="w-full flex items-center justify-between py-2 px-4 bg-white dark:bg-gray-800 rounded-lg shadow border border-gray-200 dark:border-gray-700">
+                    <span class="font-medium text-gray-800 dark:text-white">Filters</span>
+                    <svg id="filterIcon"
+                        class="w-5 h-5 text-gray-600 dark:text-gray-400 transform transition-transform duration-200"
+                        fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Sidebar/Dropdown Content -->
+            <aside id="filterSidebar" class="w-full md:w-64 flex-shrink-0 md:block hidden md:!block">
                 <div class="bg-white dark:bg-gray-800 rounded-lg shadow p-6 sticky top-32">
                     <h3 class="font-bold text-lg mb-4 text-gray-800 dark:text-white">Filter by Brand</h3>
                     <ul class="space-y-2">
@@ -254,16 +268,16 @@
                         <li>
                             <a href="./shop/brand/lenovo.html"
                                 class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png"
-                                    alt="Lenovo" class=" w-5">
+                                <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png" alt="Lenovo"
+                                    class=" w-5">
                                 <span class="text-gray-700 dark:text-gray-300">Lenovo</span>
                             </a>
                         </li>
                         <li>
                             <a href="./shop/brand/asus.html"
                                 class="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-                                <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png"
-                                    alt="ASUS" class="w-5">
+                                <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png" alt="ASUS"
+                                    class="w-5">
                                 <span class="text-gray-700 dark:text-gray-300">Asus</span>
                             </a>
                         </li>
@@ -325,23 +339,69 @@
 
                 <!-- Mixed Brand Products Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Apple MacBook Pro 14" -->
+                    <!-- MacBook Pro 16" -->
+                    <a href="./detail-item1.html">
+                        <article
+                            class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                            <div class="relative">
+                                <img src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/Bu04z64BCYaaDCVhrsBcmlgiPbxkKEdegvNg1B1o.png"
+                                    alt="MacBook Pro 16-inch" class="w-full h-48 object-contain p-4">
+                                <span
+                                    class="absolute top-2 right-2 bg-accent text-white text-xs px-2 py-1 rounded-full">Best
+                                    Seller</span>
+                            </div>
+                            <div class="p-4">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="font-semibold text-gray-800 dark:text-white">MacBook Pro 16"</h4>
+                                        <p class="text-sm text-gray-600 dark:text-gray-400">M2 Pro, 16GB, 512GB SSD</p>
+                                    </div>
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                        alt="Apple" class="h-5 w-5">
+                                </div>
+                                <div class="mt-3">
+                                    <div class="flex items-center mb-2">
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                        <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(256)</span>
+                                    </div>
+                                    <div class="flex justify-between items-center">
+                                        <span class="font-bold text-gray-800 dark:text-white">$2,499.00</span>
+                                        <button class="text-primary hover:text-blue-600">
+                                            <i class="fas fa-heart text-lg"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <button
+                                    class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </article>
+                    </a>
+
+                    <!-- ASUS ZenBook 14 OLED -->
                     <article
                         class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                         <div class="relative">
-                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mbp14-spacegray-select-202301?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1671304672290"
-                                alt="MacBook Pro 14-inch" class="w-full h-48 object-contain p-4">
+                            <img src="https://cdn2.fptshop.com.vn/unsafe/768x0/filters:format(webp):quality(75)/asus_zenbook_14_oled_um3406_black_1_6c701e74cd.png"
+                                alt="ASUS ZenBook 14 OLED" class="w-full h-48 object-contain p-4">
                             <span
                                 class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">New</span>
                         </div>
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">MacBook Pro 14"</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">M2 Pro, 16GB, 512GB SSD</p>
+                                    <h4 class="font-semibold text-gray-800 dark:text-white">ZenBook 14 OLED</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">14" 2.8K OLED, Ryzen 7 6800U</p>
                                 </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                                    alt="Apple" class="h-5 w-5">
+                                <img src="https://logos-world.net/wp-content/uploads/2020/07/Asus-Logo.png" alt="ASUS"
+                                    class="w-10">
                             </div>
                             <div class="mt-3">
                                 <div class="flex items-center mb-2">
@@ -352,10 +412,10 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star-half-alt"></i>
                                     </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(187)</span>
+                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(167)</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$1,999.00</span>
+                                    <span class="font-bold text-gray-800 dark:text-white">$1,299.00</span>
                                     <button class="text-primary hover:text-blue-600">
                                         <i class="fas fa-heart text-lg"></i>
                                     </button>
@@ -372,7 +432,7 @@
                     <article
                         class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                         <div class="relative">
-                            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-15-9520/media-gallery/notebook-xps-9520-t-black-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=402&wid=536&qlt=100,0&resMode=sharp2&size=536,402"
+                            <img src="https://i.dell.com/is/image/DellContent/content/dam/ss2/product-images/dell-client-products/notebooks/xps-notebooks/xps-15-9530/media-gallery/touch-black/notebook-xps-15-9530-t-black-gallery-1.psd?fmt=png-alpha&pscan=auto&scl=1&hei=320&wid=520&qlt=100,1&resMode=sharp2&size=520,320&chrss=full"
                                 alt="Dell XPS 15" class="w-full h-48 object-contain p-4">
                             <span
                                 class="absolute top-2 right-2 bg-accent text-white text-xs px-2 py-1 rounded-full">Best
@@ -412,23 +472,23 @@
                         </div>
                     </article>
 
-                    <!-- HP Spectre x360 -->
+                    <!-- Dell Alienware m15 R7 -->
                     <article
                         class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                         <div class="relative">
-                            <img src="https://ssl-product-images.www8-hp.com/digmedialib/prodimg/lowres/c07962448.png"
-                                alt="HP Spectre x360" class="w-full h-48 object-contain p-4">
+                            <img src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/pQSqSW7OoC3c4EtXc9rZUbwcElSvp4n88ocoh22b.png"
+                                alt="Dell Alienware m15 R7" class="w-full h-48 object-contain p-4">
                             <span
-                                class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">2-in-1</span>
+                                class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Gaming</span>
                         </div>
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">HP Spectre x360</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">14" 4K OLED, Core i7-1260P</p>
+                                    <h4 class="font-semibold text-gray-800 dark:text-white">Alienware m15 R7</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">15.6" QHD, RTX 3070 Ti</p>
                                 </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/HP_logo_2012.svg" alt="HP"
-                                    class="h-5 w-5">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/1/18/Dell_logo_2016.svg"
+                                    alt="Dell" class="h-5 w-5">
                             </div>
                             <div class="mt-3">
                                 <div class="flex items-center mb-2">
@@ -439,10 +499,10 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star-half-alt"></i>
                                     </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(198)</span>
+                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(187)</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$1,899.00</span>
+                                    <span class="font-bold text-gray-800 dark:text-white">$2,299.00</span>
                                     <button class="text-primary hover:text-blue-600">
                                         <i class="fas fa-heart text-lg"></i>
                                     </button>
@@ -455,23 +515,21 @@
                         </div>
                     </article>
 
-                    <!-- ASUS ROG Zephyrus G14 -->
+                    <!-- Lenovo IdeaPad 5 Pro -->
                     <article
                         class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                         <div class="relative">
-                            <img src="https://dlcdnwebimgs.asus.com/gain/9C060BF5-8910-4C1D-9B4F-5A0A5A5A5A5A/w1000/h732"
-                                alt="ASUS ROG Zephyrus G14" class="w-full h-48 object-contain p-4">
-                            <span
-                                class="absolute top-2 right-2 bg-gray-600 text-white text-xs px-2 py-1 rounded-full">Gaming</span>
+                            <img src="https://psrefstuff.lenovo.com/syspool/Sys/Image/IdeaPad/IdeaPad_5_Pro_16ARH7/IdeaPad_5_Pro_16ARH7_CT1_04.png"
+                                alt="Lenovo IdeaPad 5 Pro" class="w-full h-48 object-contain p-4">
                         </div>
                         <div class="p-4">
                             <div class="flex justify-between items-start">
                                 <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">ROG Zephyrus G14</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">14" QHD, Ryzen 9 6900HS</p>
+                                    <h4 class="font-semibold text-gray-800 dark:text-white">IdeaPad 5 Pro</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">16" QHD, Ryzen 7 6800HS</p>
                                 </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Asus_logo_2015.svg"
-                                    alt="ASUS" class="h-5 w-5">
+                                <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png" alt="Lenovo"
+                                    class=" w-10">
                             </div>
                             <div class="mt-3">
                                 <div class="flex items-center mb-2">
@@ -480,98 +538,55 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(243)</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$1,799.00</span>
-                                    <button class="text-primary hover:text-blue-600">
-                                        <i class="fas fa-heart text-lg"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <button
-                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Lenovo ThinkPad X1 Carbon -->
-                    <article
-                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="relative">
-                            <img src="https://p1-ofp.lenovo.com/product/504600/504600-1.webp"
-                                alt="Lenovo ThinkPad X1 Carbon" class="w-full h-48 object-contain p-4">
-                            <span
-                                class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Business</span>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">ThinkPad X1 Carbon</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">14" WUXGA, Core i7-1260P</p>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Lenovo_logo_2015.svg"
-                                    alt="Lenovo" class="h-5 w-5">
-                            </div>
-                            <div class="mt-3">
-                                <div class="flex items-center mb-2">
-                                    <div class="flex text-yellow-400 text-sm">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(287)</span>
-                                </div>
-                                <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$1,699.00</span>
-                                    <button class="text-primary hover:text-blue-600">
-                                        <i class="fas fa-heart text-lg"></i>
-                                    </button>
-                                </div>
-                            </div>
-                            <button
-                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </article>
-
-                    <!-- Apple Mac Studio -->
-                    <article
-                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                        <div class="relative">
-                            <img src="https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/mac-studio-config-202206?wid=904&hei=840&fmt=jpeg&qlt=90&.v=1653502365208"
-                                alt="Mac Studio" class="w-full h-48 object-contain p-4">
-                            <span
-                                class="absolute top-2 right-2 bg-secondary text-white text-xs px-2 py-1 rounded-full">Pro</span>
-                        </div>
-                        <div class="p-4">
-                            <div class="flex justify-between items-start">
-                                <div>
-                                    <h4 class="font-semibold text-gray-800 dark:text-white">Mac Studio</h4>
-                                    <p class="text-sm text-gray-600 dark:text-gray-400">M1 Max, 32GB, 512GB SSD</p>
-                                </div>
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
-                                    alt="Apple" class="h-5 w-5">
-                            </div>
-                            <div class="mt-3">
-                                <div class="flex items-center mb-2">
-                                    <div class="flex text-yellow-400 text-sm">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
                                     </div>
                                     <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(134)</span>
                                 </div>
                                 <div class="flex justify-between items-center">
-                                    <span class="font-bold text-gray-800 dark:text-white">$1,999.00</span>
+                                    <span class="font-bold text-gray-800 dark:text-white">$1,199.00</span>
+                                    <button class="text-primary hover:text-blue-600">
+                                        <i class="fas fa-heart text-lg"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <button
+                                class="w-full mt-3 bg-primary hover:bg-blue-600 text-white py-2 px-4 rounded-lg transition duration-200">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Lenovo ThinkBook 16p -->
+                    <article
+                        class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                        <div class="relative">
+                            <img src="https://psrefstuff.lenovo.com/syspool//Sys/Image/ThinkBook/ThinkBook_16p_G3_ARH/ThinkBook_16p_G3_ARH_CT1_05.png"
+                                alt="Lenovo ThinkBook 16p" class="w-full h-48 object-contain p-4">
+                            <span
+                                class="absolute top-2 right-2 bg-primary text-white text-xs px-2 py-1 rounded-full">Creator</span>
+                        </div>
+                        <div class="p-4">
+                            <div class="flex justify-between items-start">
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 dark:text-white">ThinkBook 16p</h4>
+                                    <p class="text-sm text-gray-600 dark:text-gray-400">16" WQXGA, Ryzen 9 6900HX</p>
+                                </div>
+                                <img src="https://1000logos.net/wp-content/uploads/2017/03/Lenovo-Logo.png" alt="Lenovo"
+                                    class=" w-10">
+                            </div>
+                            <div class="mt-3">
+                                <div class="flex items-center mb-2">
+                                    <div class="flex text-yellow-400 text-sm">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <span class="text-xs text-gray-500 dark:text-gray-400 ml-1">(112)</span>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <span class="font-bold text-gray-800 dark:text-white">$1,799.00</span>
                                     <button class="text-primary hover:text-blue-600">
                                         <i class="fas fa-heart text-lg"></i>
                                     </button>
@@ -652,13 +667,17 @@
                     <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Product Categories
                     </h3>
                     <ul class="space-y-2">
-                        <li><a href="./shop/Categories/business.html" class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a>
+                        <li><a href="./shop/Categories/business.html"
+                                class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a>
                         </li>
-                        <li><a href="./shop/Categories/gaming.html" class="text-gray-400 hover:text-white text-sm transition">Gaming Systems</a>
+                        <li><a href="./shop/Categories/gaming.html"
+                                class="text-gray-400 hover:text-white text-sm transition">Gaming Systems</a>
                         </li>
-                        <li><a href="./shop/Categories/desktop.html" class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a>
+                        <li><a href="./shop/Categories/desktop.html"
+                                class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a>
                         </li>
-                        <li><a href="./shop/Categories/creative.html" class="text-gray-400 hover:text-white text-sm transition">Creative
+                        <li><a href="./shop/Categories/creative.html"
+                                class="text-gray-400 hover:text-white text-sm transition">Creative
                                 Workstations</a></li>
                     </ul>
                 </div>
@@ -692,6 +711,15 @@
 
     <script src="../javaScript/darkmode.js"></script>
     <script src="../javaScript/mobile-menu.js"></script>
+    <script>
+        document.getElementById('filterToggle').addEventListener('click', function () {
+            const sidebar = document.getElementById('filterSidebar');
+            const icon = document.getElementById('filterIcon');
+
+            sidebar.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        });
+    </script>
 </body>
 
 </html>
