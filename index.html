@@ -789,126 +789,99 @@
             </div>
         </section>
 
-        <!-- Frequently Asked Questions Section -->
-        <section class="mb-16">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Frequently Asked Questions</h2>
-                <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">Find answers to common questions about our
-                    products, services, and policies</p>
-            </div>
+<!-- FAQ -->
+<div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+  <!-- Title -->
+  <div class="max-w-2xl mx-auto text-center mb-10 lg:mb-14">
+    <h2 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Frequently Asked Questions</h2>
+    <p class="text-gray-600 dark:text-gray-400">Find answers to common questions about our products, services, and policies</p>
+  </div>
+  <!-- End Title -->
 
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <!-- FAQ Item 1 -->
-                <div
-                    class="faq-item bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
-                    <button
-                        class="faq-question w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
-                        <span class="text-lg">What is your return policy?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300 transform"></i>
-                    </button>
-                    <div
-                        class="faq-answer px-6 pb-0 text-gray-600 dark:text-gray-400 max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="pb-6">
-                            <p>We offer a 30-day money-back guarantee on all our products. If you're not completely
-                                satisfied with your purchase, you can return it for a full refund. Products must be in
-                                original condition with all accessories included. Shipping costs for returns are the
-                                responsibility of the customer.</p>
-                        </div>
-                    </div>
-                </div>
+  <div class="max-w-3xl mx-auto">
+    <!-- Accordion -->
+    <div class="hs-accordion-group">
+      <!-- FAQ Item 1 -->
+      <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="faq-heading-one">
+        <button class="hs-accordion-toggle group w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200" aria-controls="faq-collapse-one">
+          <span class="text-lg">What is your return policy?</span>
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="faq-collapse-one" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="faq-heading-one">
+          <div class="px-6 pb-6 text-gray-600 dark:text-gray-400">
+            <p>We offer a 30-day money-back guarantee on all our products. If you're not completely satisfied with your purchase, you can return it for a full refund. Products must be in original condition with all accessories included. Shipping costs for returns are the responsibility of the customer.</p>
+          </div>
+        </div>
+      </div>
 
-                <!-- FAQ Item 2 -->
-                <div
-                    class="faq-item bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
-                    <button
-                        class="faq-question w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
-                        <span class="text-lg">Do you offer international shipping?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300 transform"></i>
-                    </button>
-                    <div
-                        class="faq-answer px-6 pb-0 text-gray-600 dark:text-gray-400 max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="pb-6">
-                            <p>Yes, we ship to over 50 countries worldwide. International shipping costs vary depending
-                                on
-                                the destination and product weight. Delivery times range from 5-15 business days. Please
-                                note that customers are responsible for any customs duties or import taxes that may
-                                apply.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+      <!-- FAQ Item 2 -->
+      <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="faq-heading-two">
+        <button class="hs-accordion-toggle group w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200" aria-controls="faq-collapse-two">
+          <span class="text-lg">Do you offer international shipping?</span>
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="faq-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="faq-heading-two">
+          <div class="px-6 pb-6 text-gray-600 dark:text-gray-400">
+            <p>Yes, we ship to over 50 countries worldwide. International shipping costs vary depending on the destination and product weight. Delivery times range from 5-15 business days. Please note that customers are responsible for any customs duties or import taxes that may apply.</p>
+          </div>
+        </div>
+      </div>
 
-                <!-- FAQ Item 3 -->
-                <div
-                    class="faq-item bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
-                    <button
-                        class="faq-question w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
-                        <span class="text-lg">What warranty do your products come with?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300 transform"></i>
-                    </button>
-                    <div
-                        class="faq-answer px-6 pb-0 text-gray-600 dark:text-gray-400 max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="pb-6">
-                            <p>All our computers come with a standard 1-year manufacturer warranty. You can extend this
-                                warranty to 2 or 3 years during checkout. The warranty covers manufacturing defects and
-                                hardware failures. It does not cover accidental damage, liquid spills, or normal wear
-                                and
-                                tear.</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- FAQ Item 3 -->
+      <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="faq-heading-three">
+        <button class="hs-accordion-toggle group w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200" aria-controls="faq-collapse-three">
+          <span class="text-lg">What warranty do your products come with?</span>
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="faq-collapse-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="faq-heading-three">
+          <div class="px-6 pb-6 text-gray-600 dark:text-gray-400">
+            <p>All our computers come with a standard 1-year manufacturer warranty. You can extend this warranty to 2 or 3 years during checkout. The warranty covers manufacturing defects and hardware failures. It does not cover accidental damage, liquid spills, or normal wear and tear.</p>
+          </div>
+        </div>
+      </div>
 
-                <!-- FAQ Item 4 -->
-                <div
-                    class="faq-item bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
-                    <button
-                        class="faq-question w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
-                        <span class="text-lg">Can I customize the computers before purchase?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300 transform"></i>
-                    </button>
-                    <div
-                        class="faq-answer px-6 pb-0 text-gray-600 dark:text-gray-400 max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="pb-6">
-                            <p>Absolutely! We offer extensive customization options for most of our systems. You can
-                                upgrade
-                                components like RAM, storage, graphics cards, and processors. Our customization tool
-                                guides
-                                you through compatible options. Custom builds typically take 3-5 business days to
-                                assemble
-                                before shipping.</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- FAQ Item 4 -->
+      <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="faq-heading-four">
+        <button class="hs-accordion-toggle group w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200" aria-controls="faq-collapse-four">
+          <span class="text-lg">Can I customize the computers before purchase?</span>
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="faq-collapse-four" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="faq-heading-four">
+          <div class="px-6 pb-6 text-gray-600 dark:text-gray-400">
+            <p>Absolutely! We offer extensive customization options for most of our systems. You can upgrade components like RAM, storage, graphics cards, and processors. Our customization tool guides you through compatible options. Custom builds typically take 3-5 business days to assemble before shipping.</p>
+          </div>
+        </div>
+      </div>
 
-                <!-- FAQ Item 5 -->
-                <div
-                    class="faq-item bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden transition-all duration-300 hover:shadow-md dark:hover:shadow-lg">
-                    <button
-                        class="faq-question w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200">
-                        <span class="text-lg">How do I track my order?</span>
-                        <i class="fas fa-chevron-down transition-transform duration-300 transform"></i>
-                    </button>
-                    <div
-                        class="faq-answer px-6 pb-0 text-gray-600 dark:text-gray-400 max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="pb-6">
-                            <p>Once your order ships, you'll receive a confirmation email with a tracking number and
-                                link.
-                                You can also track your order by logging into your TechGo account and visiting the "My
-                                Orders" section. For custom builds, you'll receive updates at each stage of the assembly
-                                process.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- FAQ Item 5 -->
+      <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="faq-heading-five">
+        <button class="hs-accordion-toggle group w-full text-start p-6 font-semibold text-gray-800 dark:text-white flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200" aria-controls="faq-collapse-five">
+          <span class="text-lg">How do I track my order?</span>
+          <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+          <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+        </button>
+        <div id="faq-collapse-five" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="faq-heading-five">
+          <div class="px-6 pb-6 text-gray-600 dark:text-gray-400">
+            <p>Once your order ships, you'll receive a confirmation email with a tracking number and link. You can also track your order by logging into your TechGo account and visiting the "My Orders" section. For custom builds, you'll receive updates at each stage of the assembly process.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Accordion -->
+  </div>
 
-            <div class="text-center mt-8">
-                <p class="text-gray-600 dark:text-gray-400 mb-4">Have more questions? We're here to help!</p>
-                <button
-                    class="bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition-colors">
-                    <a href="./src/pages/about.html">Contact Support</a>
-                </button>
-            </div>
-        </section>
+  <div class="text-center mt-8">
+    <p class="text-gray-600 dark:text-gray-400 mb-4">Have more questions? We're here to help!</p>
+    <button class="bg-primary text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-600 transition-colors">
+      <a href="./src/pages/about.html">Contact Support</a>
+    </button>
+  </div>
+</div>
+<!-- End FAQ -->
     </main>
 
     <!-- Footer -->
@@ -1001,7 +974,7 @@
 
     <script src="./src/javaScript/darkmode.js"></script>
     <script src="./src/javaScript/mobile-menu.js"></script>
-    <script src="./src/javaScript/homepage/faq.js"></script>
+    <script src="./node_modules/preline/dist/preline.js"></script>
 </body>
 
 </html>
