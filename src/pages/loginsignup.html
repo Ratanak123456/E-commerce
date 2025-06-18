@@ -5,29 +5,71 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TechGo - Sign In / Sign Up</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
   <link rel="icon" href="../Image/TechGo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <script>
-    // Set dark mode based on localStorage or system preference
-    const storedDarkMode = localStorage.getItem('darkMode');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const initialDarkMode = storedDarkMode ? storedDarkMode === 'true' : prefersDark;
-    document.documentElement.classList.toggle('dark', initialDarkMode);
+    // Initialize dark mode from localStorage or system preference
+    if (typeof localStorage !== 'undefined') {
+      const storedDarkMode = localStorage.getItem('darkMode');
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const initialDarkMode = storedDarkMode ? storedDarkMode === 'true' : prefersDark;
+      document.documentElement.classList.toggle('dark', initialDarkMode);
+    }
 
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           colors: {
-            primary: '#2563eb',
-            secondary: '#7c3aed',
-            accent: '#db2777',
-            dark: '#0f172a',
-            light: '#f8fafc',
-            soft: '#f1f5f9',
-            textDark: '#1e293b',
-            textLight: '#f8fafc'
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            secondary: {
+              50: '#f5f3ff',
+              100: '#ede9fe',
+              200: '#ddd6fe',
+              300: '#c4b5fd',
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+              700: '#6d28d9',
+              800: '#5b21b6',
+              900: '#4c1d95',
+            },
+            accent: {
+              50: '#fdf2f8',
+              100: '#fce7f3',
+              200: '#fbcfe8',
+              300: '#f9a8d4',
+              400: '#f472b6',
+              500: '#ec4899',
+              600: '#db2777',
+              700: '#be185d',
+              800: '#9d174d',
+              900: '#831843',
+            },
+            dark: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+              500: '#64748b',
+              600: '#475569',
+              700: '#334155',
+              800: '#1e293b',
+              900: '#0f172a',
+            }
           },
           boxShadow: {
             'accent': '0 4px 14px 0 rgba(219, 39, 119, 0.3)',
@@ -36,219 +78,140 @@
       },
     };
   </script>
-  <style>
-    .input-with-icon {
-      padding-left: 2.5rem;
-    }
-
-    .icon-wrapper {
-      position: absolute;
-      top: 50%;
-      left: 0.75rem;
-      transform: translateY(-50%);
-      color: #64748b;
-    }
-
-    html,
-    body,
-    .bg-soft,
-    .bg-light,
-    .text-light,
-    .text-black {
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    
-    .theme-toggle {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: #f1f5f9;
-      border-radius: 50%;
-      width: 40px;
-      height: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      z-index: 10;
-    }
-    
-    .dark .theme-toggle {
-      background: #1e293b;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    }
-    
-    .theme-toggle:hover {
-      transform: scale(1.1);
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-    }
-    
-    .dark .theme-toggle:hover {
-      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
-    }
-    
-    .theme-toggle i {
-      transition: transform 0.3s ease;
-    }
-    
-    .dark .theme-toggle .fa-sun {
-      display: block;
-      color: #f8fafc;
-    }
-    
-    .dark .theme-toggle .fa-moon {
-      display: none;
-    }
-    
-    .theme-toggle .fa-sun {
-      display: none;
-    }
-    
-    .theme-toggle .fa-moon {
-      display: block;
-      color: #1e293b;
-    }
-  </style>
 </head>
 
-<body class="bg-white dark:bg-dark text-textLight dark:bg-dark dark:text-textLight flex items-center justify-center min-h-screen p-4">
+<body class="bg-gray-50 dark:bg-dark-900 text-gray-900 dark:text-gray-100 flex items-center justify-center min-h-screen p-4 transition-colors duration-200">
 
-  <div class="w-full max-w-md bg-soft dark:bg-dark rounded-2xl shadow-xl overflow-hidden transition-all duration-300">
-    <div class="bg-gradient-to-r from-primary to-secondary p-6 text-center">
-      <div class="flex items-center justify-center gap-2 mb-2">
-        <div class="w-9 h-9 rounded-lg bg-gradient-to-r from-primary to-secondary flex items-center justify-center">
+  <div class="w-full max-w-md bg-white dark:bg-dark-800 rounded-xl shadow-lg overflow-hidden transition-all duration-300 border border-gray-200 dark:border-dark-700">
+    <!-- Header with Gradient -->
+    <div class="bg-gradient-to-r from-primary-600 to-secondary-600 p-6 text-center">
+      <div class="flex items-center justify-center gap-3 mb-3">
+        <div class="w-10 h-10 rounded-lg bg-white/20 flex items-center justify-center backdrop-blur-sm">
           <img src="../Image/TechGo.png" alt="TechGo Logo" class="w-6 h-6">
         </div>
         <span class="text-xl font-bold text-white">TechGo</span>
       </div>
-      <p class="text-xs text-white/80">Your premium tech marketplace</p>
+      <p class="text-sm text-white/90">Your premium tech marketplace</p>
     </div>
 
+    <!-- Form Container -->
     <div class="p-6">
-      <h2 class="text-2xl font-bold text-primary text-center mb-1" id="formTitle">Sign In</h2>
-      <p class="text-center text-sm text-textDark dark:text-gray-400 mb-6">Welcome back! Please enter your details.</p>
+      <h2 class="text-2xl font-bold text-primary-600 text-center mb-2" id="formTitle">Sign In</h2>
+      <p class="text-center text-sm text-gray-600 dark:text-gray-400 mb-6">Welcome back! Please enter your details.</p>
 
-      <!-- Social login options -->
-      <div class="flex justify-center space-x-4 mb-6">
-        <button
-          class="w-10 h-10 rounded-full bg-light dark:bg-soft flex items-center justify-center text-textDark dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-          <i class="fab fa-google text-accent"></i>
+      <!-- Social Login Buttons -->
+      <div class="flex justify-center gap-4 mb-6">
+        <button class="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors duration-200">
+          <i class="fab fa-google text-accent-600"></i>
         </button>
-        <button
-          class="w-10 h-10 rounded-full bg-light dark:bg-soft flex items-center justify-center text-textDark dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+        <button class="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors duration-200">
           <i class="fab fa-facebook-f text-blue-600"></i>
         </button>
-        <button
-          class="w-10 h-10 rounded-full bg-light dark:bg-soft flex items-center justify-center text-textDark dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
+        <button class="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-700 flex items-center justify-center text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-600 transition-colors duration-200">
           <i class="fab fa-apple"></i>
         </button>
       </div>
 
+      <!-- Divider -->
       <div class="flex items-center mb-6">
-        <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
-        <span class="px-3 text-sm text-textDark dark:text-gray-400">or continue with</span>
-        <div class="flex-1 border-t border-gray-300 dark:border-gray-600"></div>
+        <div class="flex-1 border-t border-gray-300 dark:border-dark-600"></div>
+        <span class="px-3 text-sm text-gray-500 dark:text-gray-400">or continue with</span>
+        <div class="flex-1 border-t border-gray-300 dark:border-dark-600"></div>
       </div>
 
+      <!-- Form -->
       <form class="space-y-4">
+        <!-- Full Name Field (Hidden by default) -->
         <div id="fullNameGroup" class="hidden">
-          <label class="block mb-1 text-sm text-textDark dark:text-gray-300">Full Name</label>
+          <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Full Name</label>
           <div class="relative">
-            <div class="icon-wrapper">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-500 dark:text-gray-400">
               <i class="far fa-user"></i>
             </div>
-            <input type="text" placeholder="Your Name"
-              class="w-full p-2 pl-10 rounded bg-light dark:bg-soft text-textDark dark:text-textDark outline-none focus:ring-2 focus:ring-primary transition-colors" />
+            <input type="text" placeholder="Your Name" class="w-full pl-10 pr-3 py-2 rounded-lg bg-gray-50 dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200">
           </div>
         </div>
 
+        <!-- Gender Field (Hidden by default) -->
         <div id="genderGroup" class="hidden">
-          <label class="block mb-1 text-sm text-textDark dark:text-gray-300">Gender</label>
+          <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Gender</label>
           <div class="relative">
-            <div class="icon-wrapper">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-500 dark:text-gray-400">
               <i class="fas fa-venus-mars"></i>
             </div>
-            <select
-              class="w-full p-2 pl-10 rounded bg-light dark:bg-soft text-textDark dark:text-textDark outline-none focus:ring-2 focus:ring-primary appearance-none transition-colors">
+            <select class="w-full pl-10 pr-10 py-2 rounded-lg bg-gray-50 dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 appearance-none transition-colors duration-200">
               <option value="">Select Gender</option>
               <option>Male</option>
               <option>Female</option>
               <option>Other</option>
               <option>Prefer not to say</option>
             </select>
-            <div class="absolute right-3 top-1/2 transform -translate-y-1/2 pointer-events-none">
-              <i class="fas fa-chevron-down text-gray-400"></i>
+            <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none text-gray-500 dark:text-gray-400">
+              <i class="fas fa-chevron-down"></i>
             </div>
           </div>
         </div>
 
+        <!-- Email Field -->
         <div>
-          <label class="block mb-1 text-sm text-textDark dark:text-gray-300">Email</label>
+          <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Email</label>
           <div class="relative">
-            <div class="icon-wrapper">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-500 dark:text-gray-400">
               <i class="far fa-envelope"></i>
             </div>
-            <input type="email" placeholder="email@example.com"
-              class="w-full p-2 pl-10 rounded bg-light dark:bg-soft text-textDark dark:text-textDark outline-none focus:ring-2 focus:ring-primary transition-colors"
-              required />
+            <input type="email" placeholder="email@example.com" required class="w-full pl-10 pr-3 py-2 rounded-lg bg-gray-50 dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200">
           </div>
         </div>
 
+        <!-- Password Field -->
         <div>
-          <label class="block mb-1 text-sm text-textDark dark:text-gray-300">Password</label>
+          <label class="block mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">Password</label>
           <div class="relative">
-            <div class="icon-wrapper">
+            <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none text-gray-500 dark:text-gray-400">
               <i class="fas fa-lock"></i>
             </div>
-            <input type="password" placeholder="********"
-              class="w-full p-2 pl-10 rounded bg-light dark:bg-soft text-textDark dark:text-textDark outline-none focus:ring-2 focus:ring-primary transition-colors"
-              required />
-            <button type="button"
-              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-              <i class="far fa-eye"></i>
+            <input type="password" id="password" placeholder="********" required class="w-full pl-10 pr-10 py-2 rounded-lg bg-gray-50 dark:bg-dark-700 border border-gray-300 dark:border-dark-600 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors duration-200">
+            <button type="button" id="togglePassword" class="absolute inset-y-0 right-0 flex items-center pr-3 text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 transition-colors duration-200">
+              <i class="far fa-eye" id="eyeIcon"></i>
             </button>
           </div>
-          <div id="passwordRequirements" class="hidden text-xs mt-1 text-textDark dark:text-gray-400 space-y-1">
-            <p class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-1"></i> At least 8 characters
-            </p>
-            <p class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-1"></i> One uppercase letter
-            </p>
+          <div id="passwordRequirements" class="hidden text-xs mt-2 text-gray-600 dark:text-gray-400 space-y-1">
+            <p class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-1"></i> At least 8 characters</p>
+            <p class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-1"></i> One uppercase letter</p>
             <p class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-1"></i> One number</p>
           </div>
         </div>
 
+        <!-- Remember Me & Forgot Password -->
         <div class="flex items-center justify-between">
           <div class="flex items-center">
-            <input type="checkbox" id="rememberMe"
-              class="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary dark:border-gray-600 transition-colors">
-            <label for="rememberMe" class="ml-2 text-sm text-textDark dark:text-gray-300 transition-colors">Remember me</label>
+            <input type="checkbox" id="rememberMe" class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 dark:border-dark-600 dark:bg-dark-700 dark:checked:bg-primary-600 transition-colors duration-200">
+            <label for="rememberMe" class="ml-2 text-sm text-gray-700 dark:text-gray-300">Remember me</label>
           </div>
-          <a href="#" class="text-sm text-accent hover:underline transition-colors">Forgot password?</a>
+          <a href="#" class="text-sm text-accent-600 hover:text-accent-700 dark:hover:text-accent-500 hover:underline transition-colors duration-200">Forgot password?</a>
         </div>
 
-        <button type="submit"
-          class="w-full p-2 bg-primary text-white rounded hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2">
+        <!-- Submit Button -->
+        <button type="submit" class="w-full py-2.5 px-4 bg-primary-600 hover:bg-primary-700 text-white font-medium rounded-lg transition-all duration-200 shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
           <a href="../../index.html">Sign In</a>
         </button>
       </form>
 
+      <!-- Toggle Between Sign In/Sign Up -->
       <div class="text-center text-sm mt-4">
-        <span id="toggleText" class="text-textDark dark:text-gray-300 transition-colors">Don't have an account?</span>
-        <button onclick="toggleForm()" class="text-accent underline ml-1 hover:text-pink-600 transition-colors">Sign Up</button>
+        <span id="toggleText" class="text-gray-600 dark:text-gray-400">Don't have an account?</span>
+        <button onclick="toggleForm()" class="text-accent-600 hover:text-accent-700 dark:hover:text-accent-500 underline ml-1 transition-colors duration-200">Sign Up</button>
       </div>
 
-      <div class="mt-6 text-center text-xs text-textDark dark:text-gray-400 transition-colors">
-        <p>By continuing, you agree to our <a href="#" class="text-accent hover:underline transition-colors">Terms of Service</a> and <a
-            href="#" class="text-accent hover:underline transition-colors">Privacy Policy</a>.</p>
+      <!-- Footer Links -->
+      <div class="mt-6 text-center text-xs text-gray-500 dark:text-gray-400">
+        <p>By continuing, you agree to our <a href="#" class="text-accent-600 hover:text-accent-700 dark:hover:text-accent-500 hover:underline transition-colors duration-200">Terms of Service</a> and <a href="#" class="text-accent-600 hover:text-accent-700 dark:hover:text-accent-500 hover:underline transition-colors duration-200">Privacy Policy</a>.</p>
       </div>
     </div>
   </div>
 
-<script src="../javaScript/loginsignup/auth-form.js"></script>
-<script src="../javaScript/loginsignup/password-toggle.js"></script>
   <script src="../javaScript/darkmode.js"></script>
+  <script src="../javaScript/loginsignup.js"></script>
 </body>
 
 </html>
