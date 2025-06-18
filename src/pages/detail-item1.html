@@ -97,8 +97,13 @@
 
     /* Custom animations */
     @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
     }
 
     .fade-in {
@@ -133,7 +138,8 @@
     <nav class="flex mb-6" aria-label="Breadcrumb">
       <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
         <li class="inline-flex items-center">
-          <a href="../../index.html" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-white">
+          <a href="../../index.html"
+            class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-primary-600 dark:text-gray-400 dark:hover:text-white">
             <i class="fas fa-home me-2"></i>
             Home
           </a>
@@ -141,7 +147,8 @@
         <li>
           <div class="flex items-center">
             <i class="fas fa-chevron-right text-gray-400 mx-2"></i>
-            <a href="./shop.html" class="ms-1 text-sm font-medium text-gray-700 hover:text-primary-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Shop</a>
+            <a href="./shop.html"
+              class="ms-1 text-sm font-medium text-gray-700 hover:text-primary-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Shop</a>
           </div>
         </li>
         <li aria-current="page">
@@ -156,21 +163,35 @@
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
       <!-- Product Gallery -->
       <div class="lg:sticky lg:top-24 self-start">
-        <div class="mb-4 rounded-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
-          <img id="main-product-image" src="../Image/mac-book-m2.png" alt="MacBook Pro 16-inch" class="w-full h-auto object-cover transition-opacity duration-300">
+        <div
+          class="mb-4 rounded-lg overflow-hidden bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 shadow-sm">
+          <img id="main-product-image" src="../Image/mac-book-m2.png" alt="MacBook Pro 16-inch"
+            class="w-full h-auto object-cover transition-opacity duration-300">
         </div>
         <div class="grid grid-cols-4 gap-3">
-          <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all hover:border-primary-500" data-image="../Image/mac-book-m2.png">
+          <button
+            class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all hover:border-primary-500"
+            data-image="../Image/mac-book-m2.png">
             <img src="../Image/mac-book-m2.png" alt="MacBook Pro 16-inch" class="w-full h-auto object-cover">
           </button>
-          <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all hover:border-primary-500" data-image="https://itronics.in/wp-content/uploads/2023/02/mbp14-spacegray-gallery4-202301.png">
-            <img src="https://itronics.in/wp-content/uploads/2023/02/mbp14-spacegray-gallery4-202301.png" alt="MacBook Pro 16-inch Port" class="w-full h-auto object-cover">
+          <button
+            class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all hover:border-primary-500"
+            data-image="https://itronics.in/wp-content/uploads/2023/02/mbp14-spacegray-gallery4-202301.png">
+            <img src="https://itronics.in/wp-content/uploads/2023/02/mbp14-spacegray-gallery4-202301.png"
+              alt="MacBook Pro 16-inch Port" class="w-full h-auto object-cover">
           </button>
-          <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all hover:border-primary-500" data-image="https://itronics.in/wp-content/uploads/2022/08/MBP-M2_HERO_-F-01.png">
-            <img src="https://itronics.in/wp-content/uploads/2022/08/MBP-M2_HERO_-F-01.png" alt="MacBook Pro 16-inch keyboard" class="w-full h-auto object-cover">
+          <button
+            class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all hover:border-primary-500"
+            data-image="https://itronics.in/wp-content/uploads/2022/08/MBP-M2_HERO_-F-01.png">
+            <img src="https://itronics.in/wp-content/uploads/2022/08/MBP-M2_HERO_-F-01.png"
+              alt="MacBook Pro 16-inch keyboard" class="w-full h-auto object-cover">
           </button>
-          <button class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all hover:border-primary-500 active" data-image="https://www.apple.com/newsroom/images/product/mac/standard/Apple-Macbook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg">
-            <img src="https://www.apple.com/newsroom/images/product/mac/standard/Apple-Macbook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg" alt="MacBook Pro 16-inch screen" class="w-full h-auto object-cover">
+          <button
+            class="product-gallery-thumbnail rounded-md overflow-hidden border-2 border-transparent transition-all hover:border-primary-500 active"
+            data-image="https://www.apple.com/newsroom/images/product/mac/standard/Apple-Macbook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg">
+            <img
+              src="https://www.apple.com/newsroom/images/product/mac/standard/Apple-Macbook-Pro-M2-Pro-and-M2-Max-hero-230117_Full-Bleed-Image.jpg.large.jpg"
+              alt="MacBook Pro 16-inch screen" class="w-full h-auto object-cover">
           </button>
         </div>
       </div>
@@ -180,7 +201,8 @@
         <div class="mb-6">
           <div class="flex justify-between items-start">
             <div>
-              <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Apple MacBook Pro 16-inch (M2 Max, 2023)</h1>
+              <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">Apple MacBook Pro 16-inch (M2 Max, 2023)
+              </h1>
               <div class="flex items-center mb-4">
                 <div class="flex items-center">
                   <div class="flex items-center">
@@ -202,15 +224,19 @@
               <i class="fas fa-share-alt"></i>
             </button>
           </div>
-          
+
           <div class="flex items-center gap-2 mb-4">
             <div class="text-4xl font-bold text-gray-900 dark:text-white">$3,499.00</div>
             <span class="text-sm line-through text-gray-500 dark:text-gray-400">$3,699.00</span>
-            <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-200">Save $200</span>
+            <span
+              class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-900 dark:text-green-200">Save
+              $200</span>
           </div>
-          
-          <p class="text-gray-700 dark:text-gray-300 mb-6">The MacBook Pro 16-inch with M2 Max chip delivers exceptional performance for professionals. With a stunning Liquid Retina XDR display, up to 96GB of unified memory, and up to 38-core GPU, it's built to handle the most demanding workflows.</p>
-          
+
+          <p class="text-gray-700 dark:text-gray-300 mb-6">The MacBook Pro 16-inch with M2 Max chip delivers exceptional
+            performance for professionals. With a stunning Liquid Retina XDR display, up to 96GB of unified memory, and
+            up to 38-core GPU, it's built to handle the most demanding workflows.</p>
+
           <div class="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
             <i class="fas fa-truck"></i>
             <span>Free shipping on all orders</span>
@@ -225,11 +251,15 @@
           <div class="mb-6">
             <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Processor</h3>
             <div class="grid grid-cols-2 gap-3">
-              <button class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-left transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10" data-option="processor" data-value="m2-pro">
+              <button
+                class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-left transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10"
+                data-option="processor" data-value="m2-pro">
                 <div class="font-medium text-gray-900 dark:text-white">M2 Pro</div>
                 <div class="text-sm text-gray-500 dark:text-gray-400">12-core CPU, 19-core GPU</div>
               </button>
-              <button class="product-option-btn border-2 border-primary-600 bg-blue-50 dark:bg-blue-900/30 rounded-lg py-2 px-4 text-left transition-all" data-option="processor" data-value="m2-max">
+              <button
+                class="product-option-btn border-2 border-primary-600 bg-blue-50 dark:bg-blue-900/30 rounded-lg py-2 px-4 text-left transition-all"
+                data-option="processor" data-value="m2-max">
                 <div class="font-medium text-gray-900 dark:text-white">M2 Max</div>
                 <div class="text-sm text-gray-500 dark:text-gray-400">12-core CPU, 38-core GPU</div>
                 <div class="mt-1 text-xs text-primary-600 font-medium">+$300</div>
@@ -240,14 +270,20 @@
           <div class="mb-6">
             <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Memory</h3>
             <div class="grid grid-cols-3 gap-3">
-              <button class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10" data-option="memory" data-value="16gb">
+              <button
+                class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10"
+                data-option="memory" data-value="16gb">
                 <div class="font-medium text-gray-900 dark:text-white">16GB</div>
               </button>
-              <button class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10" data-option="memory" data-value="32gb">
+              <button
+                class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10"
+                data-option="memory" data-value="32gb">
                 <div class="font-medium text-gray-900 dark:text-white">32GB</div>
                 <div class="mt-1 text-xs text-primary-600 font-medium">+$200</div>
               </button>
-              <button class="product-option-btn border-2 border-primary-600 bg-blue-50 dark:bg-blue-900/30 rounded-lg py-2 px-4 text-center transition-all" data-option="memory" data-value="64gb">
+              <button
+                class="product-option-btn border-2 border-primary-600 bg-blue-50 dark:bg-blue-900/30 rounded-lg py-2 px-4 text-center transition-all"
+                data-option="memory" data-value="64gb">
                 <div class="font-medium text-gray-900 dark:text-white">64GB</div>
                 <div class="mt-1 text-xs text-primary-600 font-medium">+$400</div>
               </button>
@@ -257,18 +293,26 @@
           <div class="mb-6">
             <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Storage</h3>
             <div class="grid grid-cols-4 gap-3">
-              <button class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10" data-option="storage" data-value="512gb">
+              <button
+                class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10"
+                data-option="storage" data-value="512gb">
                 <div class="font-medium text-gray-900 dark:text-white">512GB</div>
               </button>
-              <button class="product-option-btn border-2 border-primary-600 bg-blue-50 dark:bg-blue-900/30 rounded-lg py-2 px-4 text-center transition-all" data-option="storage" data-value="1tb">
+              <button
+                class="product-option-btn border-2 border-primary-600 bg-blue-50 dark:bg-blue-900/30 rounded-lg py-2 px-4 text-center transition-all"
+                data-option="storage" data-value="1tb">
                 <div class="font-medium text-gray-900 dark:text-white">1TB</div>
                 <div class="mt-1 text-xs text-primary-600 font-medium">+$200</div>
               </button>
-              <button class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10" data-option="storage" data-value="2tb">
+              <button
+                class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10"
+                data-option="storage" data-value="2tb">
                 <div class="font-medium text-gray-900 dark:text-white">2TB</div>
                 <div class="mt-1 text-xs text-primary-600 font-medium">+$600</div>
               </button>
-              <button class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10" data-option="storage" data-value="4tb">
+              <button
+                class="product-option-btn border border-gray-300 dark:border-gray-600 rounded-lg py-2 px-4 text-center transition-all hover:border-primary-600 hover:bg-blue-50/50 dark:hover:bg-blue-900/10"
+                data-option="storage" data-value="4tb">
                 <div class="font-medium text-gray-900 dark:text-white">4TB</div>
                 <div class="mt-1 text-xs text-primary-600 font-medium">+$1,200</div>
               </button>
@@ -278,8 +322,12 @@
           <div class="mb-6">
             <h3 class="text-lg font-medium text-gray-900 dark:text-white mb-3">Color</h3>
             <div class="flex items-center gap-3">
-              <button class="product-option-btn size-10 rounded-full border-2 border-primary-600 bg-gray-900 hover:ring-2 hover:ring-gray-300 transition-all" data-option="color" data-value="space-gray" title="Space Gray"></button>
-              <button class="product-option-btn size-10 rounded-full border-2 border-transparent bg-gray-200 hover:border-gray-300 hover:ring-2 hover:ring-gray-300 transition-all" data-option="color" data-value="silver" title="Silver"></button>
+              <button
+                class="product-option-btn size-10 rounded-full border-2 border-primary-600 bg-gray-900 hover:ring-2 hover:ring-gray-300 transition-all"
+                data-option="color" data-value="space-gray" title="Space Gray"></button>
+              <button
+                class="product-option-btn size-10 rounded-full border-2 border-transparent bg-gray-200 hover:border-gray-300 hover:ring-2 hover:ring-gray-300 transition-all"
+                data-option="color" data-value="silver" title="Silver"></button>
             </div>
           </div>
         </div>
@@ -288,22 +336,27 @@
         <div class="mb-8">
           <div class="flex items-center gap-4 mb-6">
             <div class="flex items-center border border-gray-300 dark:border-gray-600 rounded-lg overflow-hidden">
-              <button id="quantity-decrease" class="px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              <button id="quantity-decrease"
+                class="px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                 <i class="fas fa-minus"></i>
               </button>
-              <input type="number" id="quantity" value="1" min="1" max="10" class="w-12 text-center border-0 bg-transparent focus:ring-0 dark:bg-gray-800">
-              <button id="quantity-increase" class="px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
+              <input type="number" id="quantity" value="1" min="1" max="10"
+                class="w-12 text-center border-0 bg-transparent focus:ring-0 dark:bg-gray-800">
+              <button id="quantity-increase"
+                class="px-3 py-2 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">
                 <i class="fas fa-plus"></i>
               </button>
             </div>
             <div class="flex-1">
-              <button id="add-to-cart" class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+              <button id="add-to-cart"
+                class="w-full bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
                 <i class="fas fa-shopping-cart"></i>
                 Add to Cart - $3,499.00
               </button>
             </div>
           </div>
-          <button class="w-full border border-primary-600 text-primary-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
+          <button
+            class="w-full border border-primary-600 text-primary-600 hover:bg-blue-50 dark:hover:bg-blue-900/20 font-medium py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
             <i class="fas fa-heart"></i>
             Add to Wishlist
           </button>
@@ -377,16 +430,23 @@
     <div class="mt-16 border-b border-gray-200 dark:border-gray-700">
       <ul class="flex flex-wrap -mb-px" id="product-tabs" role="tablist">
         <li class="mr-2" role="presentation">
-          <button class="inline-block p-4 border-b-2 border-primary-600 rounded-t-lg text-primary-600 font-medium" id="description-tab" data-tab-target="description" type="button" role="tab">Description</button>
+          <button class="inline-block p-4 border-b-2 border-primary-600 rounded-t-lg text-primary-600 font-medium"
+            id="description-tab" data-tab-target="description" type="button" role="tab">Description</button>
         </li>
         <li class="mr-2" role="presentation">
-          <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 font-medium" id="specs-tab" data-tab-target="specs" type="button" role="tab">Specifications</button>
+          <button
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 font-medium"
+            id="specs-tab" data-tab-target="specs" type="button" role="tab">Specifications</button>
         </li>
         <li class="mr-2" role="presentation">
-          <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 font-medium" id="reviews-tab" data-tab-target="reviews" type="button" role="tab">Reviews</button>
+          <button
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 font-medium"
+            id="reviews-tab" data-tab-target="reviews" type="button" role="tab">Reviews</button>
         </li>
         <li role="presentation">
-          <button class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 font-medium" id="faq-tab" data-tab-target="faq" type="button" role="tab">FAQ</button>
+          <button
+            class="inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 font-medium"
+            id="faq-tab" data-tab-target="faq" type="button" role="tab">FAQ</button>
         </li>
       </ul>
     </div>
@@ -394,25 +454,35 @@
     <div id="product-tab-content" class="py-8">
       <div class="hidden fade-in" id="description" role="tabpanel" aria-labelledby="description-tab">
         <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">Power to change everything.</h3>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">The most advanced MacBook Pro ever is here. With the blazing-fast M2 Pro or M2 Max chip — the first ever pro chip designed for Mac — MacBook Pro lets you build worlds, develop immersive experiences and bring any workflow to new heights.</p>
-        <p class="text-gray-700 dark:text-gray-300 mb-4">The Liquid Retina XDR display is the best ever in a laptop, with extreme dynamic range and contrast ratio. A massive leap in GPU performance. The longest battery life ever in a Mac. And with more pro ports, you can connect high-speed peripherals and high-resolution displays.</p>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">The most advanced MacBook Pro ever is here. With the
+          blazing-fast M2 Pro or M2 Max chip — the first ever pro chip designed for Mac — MacBook Pro lets you build
+          worlds, develop immersive experiences and bring any workflow to new heights.</p>
+        <p class="text-gray-700 dark:text-gray-300 mb-4">The Liquid Retina XDR display is the best ever in a laptop,
+          with extreme dynamic range and contrast ratio. A massive leap in GPU performance. The longest battery life
+          ever in a Mac. And with more pro ports, you can connect high-speed peripherals and high-resolution displays.
+        </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div>
             <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Display</h4>
-            <p class="text-gray-700 dark:text-gray-300">16.2-inch (diagonal) Liquid Retina XDR display; 3456-by-2234 native resolution at 254 pixels per inch. ProMotion technology for adaptive refresh rates up to 120Hz.</p>
+            <p class="text-gray-700 dark:text-gray-300">16.2-inch (diagonal) Liquid Retina XDR display; 3456-by-2234
+              native resolution at 254 pixels per inch. ProMotion technology for adaptive refresh rates up to 120Hz.</p>
           </div>
           <div>
             <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Performance</h4>
-            <p class="text-gray-700 dark:text-gray-300">M2 Max with 12-core CPU, 38-core GPU, 16-core Neural Engine. 400GB/s memory bandwidth. 64GB unified memory. Next-level performance for the most demanding workflows.</p>
+            <p class="text-gray-700 dark:text-gray-300">M2 Max with 12-core CPU, 38-core GPU, 16-core Neural Engine.
+              400GB/s memory bandwidth. 64GB unified memory. Next-level performance for the most demanding workflows.
+            </p>
           </div>
           <div>
             <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Battery Life</h4>
-            <p class="text-gray-700 dark:text-gray-300">Up to 22 hours Apple TV app movie playback. Up to 15 hours wireless web. 100-watt-hour lithium-polymer battery. 140W USB-C Power Adapter.</p>
+            <p class="text-gray-700 dark:text-gray-300">Up to 22 hours Apple TV app movie playback. Up to 15 hours
+              wireless web. 100-watt-hour lithium-polymer battery. 140W USB-C Power Adapter.</p>
           </div>
           <div>
             <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Camera & Audio</h4>
-            <p class="text-gray-700 dark:text-gray-300">1080p FaceTime HD camera. Studio-quality three-mic array. Six-speaker sound system with force-cancelling woofers. Spatial audio with Dolby Atmos.</p>
+            <p class="text-gray-700 dark:text-gray-300">1080p FaceTime HD camera. Studio-quality three-mic array.
+              Six-speaker sound system with force-cancelling woofers. Spatial audio with Dolby Atmos.</p>
           </div>
         </div>
       </div>
@@ -443,11 +513,13 @@
               </tr>
               <tr class="hover:bg-gray-50 dark:hover:bg-gray-800">
                 <th class="py-3 px-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Display</th>
-                <td class="py-3 px-4">16.2-inch (diagonal) Liquid Retina XDR display, 3456x2234 resolution, ProMotion (up to 120Hz), True Tone</td>
+                <td class="py-3 px-4">16.2-inch (diagonal) Liquid Retina XDR display, 3456x2234 resolution, ProMotion
+                  (up to 120Hz), True Tone</td>
               </tr>
               <tr class="hover:bg-gray-50 dark:hover:bg-gray-800">
                 <th class="py-3 px-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Ports</th>
-                <td class="py-3 px-4">HDMI, SDXC card slot, 3.5mm headphone jack, MagSafe 3 port, Three Thunderbolt 4 (USB-C) ports</td>
+                <td class="py-3 px-4">HDMI, SDXC card slot, 3.5mm headphone jack, MagSafe 3 port, Three Thunderbolt 4
+                  (USB-C) ports</td>
               </tr>
               <tr class="hover:bg-gray-50 dark:hover:bg-gray-800">
                 <th class="py-3 px-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Wireless</th>
@@ -455,7 +527,8 @@
               </tr>
               <tr class="hover:bg-gray-50 dark:hover:bg-gray-800">
                 <th class="py-3 px-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Battery</th>
-                <td class="py-3 px-4">100-watt-hour lithium-polymer battery, Up to 22 hours Apple TV app movie playback</td>
+                <td class="py-3 px-4">100-watt-hour lithium-polymer battery, Up to 22 hours Apple TV app movie playback
+                </td>
               </tr>
               <tr class="hover:bg-gray-50 dark:hover:bg-gray-800">
                 <th class="py-3 px-4 font-medium text-gray-900 dark:text-white whitespace-nowrap">Dimensions</th>
@@ -485,7 +558,8 @@
               <span class="text-gray-700 dark:text-gray-300">4.7 out of 5 (142 reviews)</span>
             </div>
           </div>
-          <button class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
+          <button
+            class="bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-lg transition-colors">
             Write a Review
           </button>
         </div>
@@ -495,7 +569,8 @@
             <div class="flex items-center justify-between mb-2">
               <div class="flex items-center">
                 <div class="size-10 rounded-full overflow-hidden mr-3">
-                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson" class="w-full h-full object-cover">
+                  <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson"
+                    class="w-full h-full object-cover">
                 </div>
                 <div>
                   <h4 class="font-medium text-gray-900 dark:text-white">Sarah Johnson</h4>
@@ -516,14 +591,17 @@
               </button>
             </div>
             <h5 class="font-medium text-gray-900 dark:text-white mb-1">Perfect for video editing</h5>
-            <p class="text-gray-700 dark:text-gray-300">I've been using this for 4K video editing and it handles everything I throw at it without breaking a sweat. The display is absolutely stunning and the battery life is incredible for the performance. Definitely worth the investment for professionals.</p>
+            <p class="text-gray-700 dark:text-gray-300">I've been using this for 4K video editing and it handles
+              everything I throw at it without breaking a sweat. The display is absolutely stunning and the battery life
+              is incredible for the performance. Definitely worth the investment for professionals.</p>
           </div>
 
           <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
             <div class="flex items-center justify-between mb-2">
               <div class="flex items-center">
                 <div class="size-10 rounded-full overflow-hidden mr-3">
-                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen" class="w-full h-full object-cover">
+                  <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael Chen"
+                    class="w-full h-full object-cover">
                 </div>
                 <div>
                   <h4 class="font-medium text-gray-900 dark:text-white">Michael Chen</h4>
@@ -544,11 +622,14 @@
               </button>
             </div>
             <h5 class="font-medium text-gray-900 dark:text-white mb-1">Great but heavy</h5>
-            <p class="text-gray-700 dark:text-gray-300">The performance is outstanding and the screen is beautiful. My only complaint is that it's quite heavy compared to my previous laptop. If portability is a major concern, you might want to consider the 14-inch model.</p>
+            <p class="text-gray-700 dark:text-gray-300">The performance is outstanding and the screen is beautiful. My
+              only complaint is that it's quite heavy compared to my previous laptop. If portability is a major concern,
+              you might want to consider the 14-inch model.</p>
           </div>
 
           <div class="text-center pt-4">
-            <button class="text-primary-600 font-medium hover:text-primary-700 flex items-center justify-center gap-2 mx-auto">
+            <button
+              class="text-primary-600 font-medium hover:text-primary-700 flex items-center justify-center gap-2 mx-auto">
               <span>Load More Reviews</span>
               <i class="fas fa-chevron-down"></i>
             </button>
@@ -557,97 +638,172 @@
       </div>
 
       <div class="hidden fade-in" id="faq" role="tabpanel" aria-labelledby="faq-tab">
-        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-6">Frequently Asked Questions</h3>
+        <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+          <div class="max-w-3xl mx-auto">
+            <!-- Accordion -->
+            <div class="hs-accordion-group">
+              <!-- FAQ Item 1 -->
+              <div
+                class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700"
+                id="mac-faq-one">
+                <button
+                  class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  aria-controls="mac-faq-collapse-one">
+                  <span class="text-lg">What's the difference between M2 Pro and M2 Max?</span>
+                  <svg
+                    class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                  <svg
+                    class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m18 15-6-6-6 6" />
+                  </svg>
+                </button>
+                <div id="mac-faq-collapse-one"
+                  class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="mac-faq-one">
+                  <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
+                    <p>The M2 Pro has a 12-core CPU and up to 19-core GPU, while the M2 Max has a 12-core CPU and up to
+                      38-core GPU. The M2 Max also offers more memory bandwidth (400GB/s vs 200GB/s) and supports up to
+                      96GB of unified memory compared to 32GB on M2 Pro. For most professional workflows like video
+                      editing, 3D rendering, and software development, the M2 Max provides significantly better
+                      performance.</p>
+                  </div>
+                </div>
+              </div>
 
-        <div class="space-y-4">
-          <!-- FAQ Item 1 -->
-          <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="mac-faq-one">
-            <button class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" aria-controls="mac-faq-collapse-one">
-              <span>What's the difference between M2 Pro and M2 Max?</span>
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div id="mac-faq-collapse-one" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="mac-faq-one">
-              <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
-                <p>The M2 Pro has a 12-core CPU and up to 19-core GPU, while the M2 Max has a 12-core CPU and up to 38-core GPU. The M2 Max also offers more memory bandwidth (400GB/s vs 200GB/s) and supports up to 96GB of unified memory compared to 32GB on M2 Pro. For most professional workflows like video editing, 3D rendering, and software development, the M2 Max provides significantly better performance.</p>
+              <!-- FAQ Item 2 -->
+              <div
+                class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700"
+                id="mac-faq-two">
+                <button
+                  class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  aria-controls="mac-faq-collapse-two">
+                  <span class="text-lg">Can I upgrade the memory or storage after purchase?</span>
+                  <svg
+                    class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                  <svg
+                    class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m18 15-6-6-6 6" />
+                  </svg>
+                </button>
+                <div id="mac-faq-collapse-two"
+                  class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="mac-faq-two">
+                  <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
+                    <p>No, the memory (RAM) and storage (SSD) are integrated into the Apple silicon chip and cannot be
+                      upgraded after purchase. You'll need to configure your MacBook Pro with the appropriate amount of
+                      memory and storage when ordering.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div
+                class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700"
+                id="mac-faq-three">
+                <button
+                  class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  aria-controls="mac-faq-collapse-three">
+                  <span class="text-lg">Does it support multiple external displays?</span>
+                  <svg
+                    class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                  <svg
+                    class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m18 15-6-6-6 6" />
+                  </svg>
+                </button>
+                <div id="mac-faq-collapse-three"
+                  class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="mac-faq-three">
+                  <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
+                    <p>Yes, the MacBook Pro with M2 Max supports up to four external displays: one 8K display at 60Hz or
+                      one 4K display at 240Hz via HDMI, plus up to three 6K displays at 60Hz via Thunderbolt. The M2 Pro
+                      model supports up to two external displays.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div
+                class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700"
+                id="mac-faq-four">
+                <button
+                  class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  aria-controls="mac-faq-collapse-four">
+                  <span class="text-lg">What's included in the box?</span>
+                  <svg
+                    class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                  <svg
+                    class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m18 15-6-6-6 6" />
+                  </svg>
+                </button>
+                <div id="mac-faq-collapse-four"
+                  class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="mac-faq-four">
+                  <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
+                    <p>The MacBook Pro comes with a 140W USB-C Power Adapter and a USB-C to MagSafe 3 Cable. You'll need
+                      to purchase any additional adapters or peripherals separately.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div
+                class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm mb-4 overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700"
+                id="mac-faq-five">
+                <button
+                  class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                  aria-controls="mac-faq-collapse-five">
+                  <span class="text-lg">What's the return policy?</span>
+                  <svg
+                    class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
+                  <svg
+                    class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="m18 15-6-6-6 6" />
+                  </svg>
+                </button>
+                <div id="mac-faq-collapse-five"
+                  class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300"
+                  aria-labelledby="mac-faq-five">
+                  <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
+                    <p>We offer a 14-day return policy for all products in their original condition. Custom-configured
+                      Macs may have different return policies. Please contact our customer service for specific details
+                      about your order.</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-
-          <!-- FAQ Item 2 -->
-          <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="mac-faq-two">
-            <button class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" aria-controls="mac-faq-collapse-two">
-              <span>Can I upgrade the memory or storage after purchase?</span>
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div id="mac-faq-collapse-two" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="mac-faq-two">
-              <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
-                <p>No, the memory (RAM) and storage (SSD) are integrated into the Apple silicon chip and cannot be upgraded after purchase. You'll need to configure your MacBook Pro with the appropriate amount of memory and storage when ordering.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 3 -->
-          <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="mac-faq-three">
-            <button class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" aria-controls="mac-faq-collapse-three">
-              <span>Does it support multiple external displays?</span>
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div id="mac-faq-collapse-three" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="mac-faq-three">
-              <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
-                <p>Yes, the MacBook Pro with M2 Max supports up to four external displays: one 8K display at 60Hz or one 4K display at 240Hz via HDMI, plus up to three 6K displays at 60Hz via Thunderbolt. The M2 Pro model supports up to two external displays.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 4 -->
-          <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="mac-faq-four">
-            <button class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" aria-controls="mac-faq-collapse-four">
-              <span>What's included in the box?</span>
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div id="mac-faq-collapse-four" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="mac-faq-four">
-              <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
-                <p>The MacBook Pro comes with a 140W USB-C Power Adapter and a USB-C to MagSafe 3 Cable. You'll need to purchase any additional adapters or peripherals separately.</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- FAQ Item 5 -->
-          <div class="hs-accordion bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg overflow-hidden hs-accordion-active:bg-gray-50 dark:hs-accordion-active:bg-gray-700" id="mac-faq-five">
-            <button class="hs-accordion-toggle group w-full flex items-center justify-between p-4 text-left font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors" aria-controls="mac-faq-collapse-five">
-              <span>What's the return policy?</span>
-              <svg class="hs-accordion-active:hidden block shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m6 9 6 6 6-6" />
-              </svg>
-              <svg class="hs-accordion-active:block hidden shrink-0 size-5 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m18 15-6-6-6 6" />
-              </svg>
-            </button>
-            <div id="mac-faq-collapse-five" class="hs-accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="mac-faq-five">
-              <div class="px-4 pb-4 text-gray-700 dark:text-gray-300">
-                <p>We offer a 14-day return policy for all products in their original condition. Custom-configured Macs may have different return policies. Please contact our customer service for specific details about your order.</p>
-              </div>
-            </div>
+            <!-- End Accordion -->
           </div>
         </div>
       </div>
@@ -658,18 +814,22 @@
       <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-8">You May Also Like</h3>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         <!-- Product 1 - Mac Studio -->
-        <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+        <article
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
           <div class="relative">
-            <img src="https://www.macstoreuk.com/wp-content/uploads/2022/05/StudioFront500-300x300.png" alt="Mac Studio" class="w-full h-48 object-contain p-4 group-hover:scale-105 transition-transform duration-300">
+            <img src="https://www.macstoreuk.com/wp-content/uploads/2022/05/StudioFront500-300x300.png" alt="Mac Studio"
+              class="w-full h-48 object-contain p-4 group-hover:scale-105 transition-transform duration-300">
             <span class="absolute top-2 right-2 bg-secondary-600 text-white text-xs px-2 py-1 rounded-full">Pro</span>
           </div>
           <div class="p-4">
             <div class="flex justify-between items-start">
               <div>
-                <h4 class="font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors">Mac Studio</h4>
+                <h4 class="font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors">
+                  Mac Studio</h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400">M1 Max, 32GB, 512GB SSD</p>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-5 w-5 dark:invert">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"
+                class="h-5 w-5 dark:invert">
             </div>
             <div class="mt-3">
               <div class="flex items-center mb-2">
@@ -689,25 +849,31 @@
                 </button>
               </div>
             </div>
-            <button class="w-full mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition duration-200">
+            <button
+              class="w-full mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition duration-200">
               Add to Cart
             </button>
           </div>
         </article>
 
         <!-- Product 2 - MacBook Air M2 -->
-        <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+        <article
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
           <div class="relative">
-            <img src="https://149426355.v2.pressablecdn.com/wp-content/uploads/2022/06/m2air-hero-6c.png" alt="MacBook Air M2" class="w-full h-48 object-contain p-4 group-hover:scale-105 transition-transform duration-300">
+            <img src="https://149426355.v2.pressablecdn.com/wp-content/uploads/2022/06/m2air-hero-6c.png"
+              alt="MacBook Air M2"
+              class="w-full h-48 object-contain p-4 group-hover:scale-105 transition-transform duration-300">
             <span class="absolute top-2 right-2 bg-primary-600 text-white text-xs px-2 py-1 rounded-full">New</span>
           </div>
           <div class="p-4">
             <div class="flex justify-between items-start">
               <div>
-                <h4 class="font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors">MacBook Air M2</h4>
+                <h4 class="font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors">
+                  MacBook Air M2</h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400">13.6" Retina Display</p>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-5 w-5 dark:invert">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"
+                class="h-5 w-5 dark:invert">
             </div>
             <div class="mt-3">
               <div class="flex items-center mb-2">
@@ -727,24 +893,31 @@
                 </button>
               </div>
             </div>
-            <button class="w-full mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition duration-200">
+            <button
+              class="w-full mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition duration-200">
               Add to Cart
             </button>
           </div>
         </article>
 
         <!-- Product 3 - iMac 24" -->
-        <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+        <article
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
           <div class="relative">
-            <img src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/yqvujf0PxZlXqWQy9HBkp3bgE3fuOhbRHJtSFdRe.png" alt="iMac 24-inch" class="w-full h-48 object-contain p-4 group-hover:scale-105 transition-transform duration-300">
+            <img
+              src="https://s3.ap-southeast-1.amazonaws.com/uploads-store/uploads/all/yqvujf0PxZlXqWQy9HBkp3bgE3fuOhbRHJtSFdRe.png"
+              alt="iMac 24-inch"
+              class="w-full h-48 object-contain p-4 group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-start">
               <div>
-                <h4 class="font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors">iMac 24"</h4>
+                <h4 class="font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors">
+                  iMac 24"</h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400">M1, 8GB, 256GB SSD</p>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-5 w-5 dark:invert">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"
+                class="h-5 w-5 dark:invert">
             </div>
             <div class="mt-3">
               <div class="flex items-center mb-2">
@@ -764,24 +937,29 @@
                 </button>
               </div>
             </div>
-            <button class="w-full mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition duration-200">
+            <button
+              class="w-full mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition duration-200">
               Add to Cart
             </button>
           </div>
         </article>
 
         <!-- Product 4 - Mac mini -->
-        <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+        <article
+          class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
           <div class="relative">
-            <img src="https://www.apple.com/v/mac-mini/m/images/overview/hero__gf2g7kt3mquu_large.jpg" alt="Mac mini" class="w-full h-48 object-contain p-4 group-hover:scale-105 transition-transform duration-300">
+            <img src="https://www.apple.com/v/mac-mini/m/images/overview/hero__gf2g7kt3mquu_large.jpg" alt="Mac mini"
+              class="w-full h-48 object-contain p-4 group-hover:scale-105 transition-transform duration-300">
           </div>
           <div class="p-4">
             <div class="flex justify-between items-start">
               <div>
-                <h4 class="font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors">Mac mini</h4>
+                <h4 class="font-semibold text-gray-800 dark:text-white group-hover:text-primary-600 transition-colors">
+                  Mac mini</h4>
                 <p class="text-sm text-gray-600 dark:text-gray-400">M2, 8GB, 256GB SSD</p>
               </div>
-              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" class="h-5 w-5 dark:invert">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple"
+                class="h-5 w-5 dark:invert">
             </div>
             <div class="mt-3">
               <div class="flex items-center mb-2">
@@ -801,7 +979,8 @@
                 </button>
               </div>
             </div>
-            <button class="w-full mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition duration-200">
+            <button
+              class="w-full mt-3 bg-primary-600 hover:bg-primary-700 text-white py-2 px-4 rounded-lg transition duration-200">
               Add to Cart
             </button>
           </div>
@@ -824,7 +1003,8 @@
             </div>
           </div>
           <p class="text-gray-400 text-sm leading-relaxed">
-            Institute of Science and Technology Advanced Development - Premier educational institution shaping future innovators.
+            Institute of Science and Technology Advanced Development - Premier educational institution shaping future
+            innovators.
           </p>
         </div>
 
@@ -834,9 +1014,12 @@
           <ul class="space-y-2">
             <li><a href="./about.html" class="text-gray-400 hover:text-white text-sm transition">Contact Us</a></li>
             <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">FAQs</a></li>
-            <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Shipping Policy</a></li>
-            <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Returns & Exchanges</a></li>
-            <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Track Your Order</a></li>
+            <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Shipping Policy</a>
+            </li>
+            <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Returns &
+                Exchanges</a></li>
+            <li><a href="../../index.html" class="text-gray-400 hover:text-white text-sm transition">Track Your
+                Order</a></li>
           </ul>
         </div>
 
@@ -844,10 +1027,14 @@
         <div>
           <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Product Categories</h3>
           <ul class="space-y-2">
-            <li><a href="./shop/Categories/business.html" class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a></li>
-            <li><a href="./shop/Categories/gaming.html" class="text-gray-400 hover:text-white text-sm transition">Gaming Systems</a></li>
-            <li><a href="./shop/Categories/desktop.html" class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a></li>
-            <li><a href="./shop/Categories/creative.html" class="text-gray-400 hover:text-white text-sm transition">Creative Workstations</a></li>
+            <li><a href="./shop/Categories/business.html"
+                class="text-gray-400 hover:text-white text-sm transition">Business Laptops</a></li>
+            <li><a href="./shop/Categories/gaming.html" class="text-gray-400 hover:text-white text-sm transition">Gaming
+                Systems</a></li>
+            <li><a href="./shop/Categories/desktop.html"
+                class="text-gray-400 hover:text-white text-sm transition">Desktop Computers</a></li>
+            <li><a href="./shop/Categories/creative.html"
+                class="text-gray-400 hover:text-white text-sm transition">Creative Workstations</a></li>
           </ul>
         </div>
 
@@ -856,7 +1043,8 @@
           <h3 class="text-base font-semibold mb-3 uppercase tracking-wider text-gray-200">Newsletter</h3>
           <p class="text-gray-400 text-sm mb-3">Subscribe for exclusive deals and tech insights.</p>
           <div class="flex">
-            <input type="email" placeholder="Your email" class="px-3 py-2 w-full rounded-l-lg focus:outline-none text-gray-800 text-sm">
+            <input type="email" placeholder="Your email"
+              class="px-3 py-2 w-full rounded-l-lg focus:outline-none text-gray-800 text-sm">
             <button class="bg-primary-600 hover:bg-primary-700 px-4 rounded-r-lg transition">
               <i class="fas fa-paper-plane text-white"></i>
             </button>
@@ -876,101 +1064,9 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    // Product Gallery
-    document.querySelectorAll('.product-gallery-thumbnail').forEach(thumbnail => {
-      thumbnail.addEventListener('click', function() {
-        const mainImage = document.getElementById('main-product-image');
-        const newImageSrc = this.getAttribute('data-image');
-        
-        // Add fade effect
-        mainImage.style.opacity = '0';
-        
-        setTimeout(() => {
-          mainImage.src = newImageSrc;
-          mainImage.style.opacity = '1';
-        }, 300);
-        
-        // Update active thumbnail
-        document.querySelectorAll('.product-gallery-thumbnail').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-
-    // Product Options
-    document.querySelectorAll('.product-option-btn').forEach(option => {
-      option.addEventListener('click', function() {
-        const optionType = this.getAttribute('data-option');
-        const optionValue = this.getAttribute('data-value');
-        
-        // Remove active state from all options of this type
-        document.querySelectorAll(`.product-option-btn[data-option="${optionType}"]`).forEach(opt => {
-          opt.classList.remove('border-2', 'border-primary-600', 'bg-blue-50', 'dark:bg-blue-900/30');
-          opt.classList.add('border', 'border-gray-300', 'dark:border-gray-600');
-        });
-        
-        // Add active state to selected option
-        this.classList.remove('border', 'border-gray-300', 'dark:border-gray-600');
-        this.classList.add('border-2', 'border-primary-600', 'bg-blue-50', 'dark:bg-blue-900/30');
-        
-        console.log(`Selected ${optionType}: ${optionValue}`);
-      });
-    });
-
-    // Quantity Selector
-    const quantityInput = document.getElementById('quantity');
-    document.getElementById('quantity-decrease').addEventListener('click', () => {
-      if (parseInt(quantityInput.value) > 1) {
-        quantityInput.value = parseInt(quantityInput.value) - 1;
-      }
-    });
-    document.getElementById('quantity-increase').addEventListener('click', () => {
-      if (parseInt(quantityInput.value) < 10) {
-        quantityInput.value = parseInt(quantityInput.value) + 1;
-      }
-    });
-
-    // Tabs
-    document.querySelectorAll('[data-tab-target]').forEach(tab => {
-      tab.addEventListener('click', () => {
-        const target = document.getElementById(tab.getAttribute('data-tab-target'));
-        
-        // Hide all tab content
-        document.querySelectorAll('#product-tab-content > div').forEach(content => {
-          content.classList.add('hidden');
-        });
-        
-        // Show selected tab content
-        target.classList.remove('hidden');
-        
-        // Update active tab
-        document.querySelectorAll('#product-tabs button').forEach(t => {
-          t.classList.remove('border-primary-600', 'text-primary-600');
-          t.classList.add('border-transparent');
-        });
-        
-        tab.classList.add('border-primary-600', 'text-primary-600');
-        tab.classList.remove('border-transparent');
-      });
-    });
-
-    // Accordion
-    document.querySelectorAll('.hs-accordion-toggle').forEach(accordion => {
-      accordion.addEventListener('click', () => {
-        const targetId = accordion.getAttribute('aria-controls');
-        const target = document.getElementById(targetId);
-        
-        if (target.classList.contains('hidden')) {
-          target.classList.remove('hidden');
-          accordion.parentElement.classList.add('hs-accordion-active:bg-gray-50', 'dark:hs-accordion-active:bg-gray-700');
-        } else {
-          target.classList.add('hidden');
-          accordion.parentElement.classList.remove('hs-accordion-active:bg-gray-50', 'dark:hs-accordion-active:bg-gray-700');
-        }
-      });
-    });
-  </script>
+  <script src="../javaScript/darkmode.js"></script>
+  <script src="../javaScript/detailpage.js"></script>
+  <script src="../../node_modules/preline/dist/preline.js"></script>
 </body>
 
 </html>
